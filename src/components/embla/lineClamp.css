@@ -1,0 +1,12 @@
+.tailwing {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6; /* number of lines to show */
+  /* fallback for browsers that do not support -webkit-line-clamp */
+  max-height: calc(
+    1.2em * 8
+  ); /* fallback: calculate max-height based on line height */
+  line-height: auto; /* fallback: line height of the text */
+}
