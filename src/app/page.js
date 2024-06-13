@@ -47,10 +47,10 @@ export default function Page() {
       <HomeCarousel />
       <About />
       <ExpertContainer />
-      <h1 className="text-center text-5xl mt-12">Tools <span className="text-[#adadad] nunito">I use</span></h1>
+      <h1 className="text-center text-5xl mt-12 nunito">Tools <span className="text-[#adadad]">I use</span></h1>
       <ToolStack />
       <ProjectSlider slides={arr} options={OPTIONS} />
-      <h1 className="text-center text-5xl mt-12">Skillset <span className="nunito text-[#adadad]">I work with</span></h1>
+      <h1 className="text-center text-5xl mt-12 nunito">Skillset <span className="text-[#adadad]">I work with</span></h1>
       <Techstack />
       <h1 className="text-5xl mt-12 w-full">Github Contribution activity</h1>
       <GithubContribution />

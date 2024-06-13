@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Nunito_Sans } from "next/font/google";
 
-const inter = Nunito_Sans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "𝙎𝙝𝙖𝙧𝙟𝙚𝙚𝙡 𝙃𝙪𝙨𝙨𝙖𝙞𝙣- 𝙁𝙧𝙤𝙣𝙩-𝙚𝙣𝙙 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧",
