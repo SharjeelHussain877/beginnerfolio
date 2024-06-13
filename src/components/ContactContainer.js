@@ -7,11 +7,11 @@ function ContactContainer() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-screen-xl w-full py-8">
       <div className="flex flex-col justify-center items-center p-4">
-        <Typography variant={"h2"} className="w-full md:w-[60%]">
+        <Typography variant={"h2"} className="w-full md:w-[60%] nunito">
           Let's chat.
           <br /> Tell me about your project.
         </Typography>
-        <Typography variant={"body"} className="w-full md:w-[60%]">
+        <Typography variant={"body"} className="w-full md:w-[60%] nunito  ">
           Let's create something together 👋🏻
         </Typography>
         <div className="flex gap-4 mt-4">
@@ -19,9 +19,9 @@ function ContactContainer() {
             <i className="fa-regular fa-envelope"></i>
           </span>
           <div>
-            <span>Mail me at</span>
+            <span className="nunito">Mail me at</span>
             <br />
-            <span>sharjeelhussain877@gmail.com</span>
+            <span className="nunito font-semibold">sharjeelhussain877@gmail.com</span>
           </div>
         </div>
       </div>

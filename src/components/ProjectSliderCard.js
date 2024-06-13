@@ -22,17 +22,17 @@ export default function ProjectSliderCard({ data }) {
         />
       </CardHeader>
       <CardBody>
-        <Typography variant="h6" color="gray" className="mb-4 uppercase">
+        <Typography variant="h6" color="gray" className="mb-4 uppercase nunito">
           {data.type}
         </Typography>
-        <Typography variant="h4" color="blue-gray" className="mb-2">
+        <Typography variant="h4" color="blue-gray" className="mb-2 nunito">
           {data.title}
         </Typography>
-        <Typography color="gray" className="mb-8 font-normal">
+        <Typography color="gray" className="mb-8 font-normal nunito">
           {data.description}
         </Typography>
         <a href="#" className="inline-block">
-          <Button variant="text" className="flex items-center gap-2">
+          <Button variant="text" className="flex items-center gap-2 nunito">
             Learn More
             <svg
               xmlns="http://www.w3.org/2000/svg"

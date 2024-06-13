@@ -19,62 +19,20 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
-  Bars4Icon,
-  GlobeAmericasIcon,
-  NewspaperIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
-  SquaresPlusIcon,
-  SunIcon,
-  TagIcon,
-  UserGroupIcon,
+    CodeBracketSquareIcon,
+    GiftIcon
 } from "@heroicons/react/24/solid";
 
 const navListMenuItems = [
   {
-    title: "Products",
+    title: "Projects",
     description: "Find the perfect solution for your needs.",
-    icon: SquaresPlusIcon,
+    icon: CodeBracketSquareIcon,
   },
   {
-    title: "About Us",
+    title: "Techstack",
     description: "Meet and learn about our dedication",
-    icon: UserGroupIcon,
-  },
-  {
-    title: "Blog",
-    description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
-  },
-  {
-    title: "Services",
-    description: "Learn how we can help you achieve your goals.",
-    icon: SunIcon,
-  },
-  {
-    title: "Support",
-    description: "Reach out to us for assistance or inquiries",
-    icon: GlobeAmericasIcon,
-  },
-  {
-    title: "Contact",
-    description: "Find the perfect solution for your needs.",
-    icon: PhoneIcon,
-  },
-  {
-    title: "News",
-    description: "Read insightful articles, tips, and expert opinions.",
-    icon: NewspaperIcon,
-  },
-  {
-    title: "Products",
-    description: "Find the perfect solution for your needs.",
-    icon: RectangleGroupIcon,
-  },
-  {
-    title: "Special Offers",
-    description: "Explore limited-time deals and bundles",
-    icon: TagIcon,
+    icon: GiftIcon,
   },
 ];
 
@@ -95,13 +53,13 @@ function NavListMenu() {
             <Typography
               variant="h6"
               color="blue-gray"
-              className="flex items-center text-sm font-bold"
+              className="flex items-center text-sm font-bold nunito"
             >
               {title}
             </Typography>
             <Typography
               variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
+              className="text-xs !font-medium text-blue-gray-500 nunito"
             >
               {description}
             </Typography>
@@ -123,11 +81,11 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 nunito"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Resources
+              Menu
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -166,7 +124,16 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">Home</ListItem>
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">About us</ListItem>
       </Typography>
       <NavListMenu />
       <Typography
@@ -176,7 +143,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
           Contact Us
         </ListItem>
       </Typography>
@@ -195,22 +162,22 @@ export default function NavigationBar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+    <Navbar className="mx-auto max-w-screen-xl px-4 py-2 shadow-none border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina"
         >
-          Material Tailwind
+          Sharjeel Hussain
         </Typography>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block nunito">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
           <Avatar
-            src="https://docs.material-tailwind.com/img/face-2.jpg"
+            src="/logo.png"
             alt="avatar"
             variant="rounded"
             size="sm"

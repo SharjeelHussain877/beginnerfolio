@@ -21,13 +21,13 @@ export default function ExpertiseCard({ title, description }) {
     <>
       <Card className="max-w-86 m-2 bg-white shadow-md bg-clip-border justify-between">
         <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
+          <Typography variant="h5" color="blue-gray" className="mb-2 nunito">
             {title}
           </Typography>
-          <Typography className="tailwing">{description}</Typography>
+          <Typography className="tailwing nunito ">{description}</Typography>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button onClick={handleOpen}>Read More</Button>
+          <Button onClick={handleOpen} className="nunito">Read More</Button>
         </CardFooter>
       </Card>
       <Dialog
@@ -38,8 +38,8 @@ export default function ExpertiseCard({ title, description }) {
           unmount: { scale: 0.9, y: -100 },
         }}
       >
-        <DialogHeader>{title}</DialogHeader>
-        <DialogBody>{description}</DialogBody>
+        <DialogHeader className="nunito">{title}</DialogHeader>
+        <DialogBody className="nunito">{description}</DialogBody>
         <DialogFooter>
           <Button variant="gradient" color="#212121" onClick={handleOpen}>
             <span>okay</span>

@@ -10,11 +10,11 @@ function About() {
         <div className="col-span-2">
           <Typography
             variant="h1"
-            className="mb-4 text-3xl md:text-4xl lg:text-5xl text-gray-900"
+            className="mb-4 text-3xl md:text-4xl lg:text-5xl text-gray-900 nunito"
           >
             About Me
           </Typography>
-          <Typography variant="lead" className="mb-12 opacity-80 text-gray-700">
+          <Typography variant="lead" className="mb-12 opacity-80 text-gray-700 nunito">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -26,8 +26,8 @@ function About() {
             PageMaker including versions of Lorem Ipsum.
           </Typography>
           <div className="flex gap-2">
-            <Button>Show more</Button>
-            <Button variant="outlined">Show more</Button>
+            <Button className="nunito">Show more</Button>
+            <Button variant="outlined" className="nunito">Show more</Button>
           </div>
         </div>
         <div>

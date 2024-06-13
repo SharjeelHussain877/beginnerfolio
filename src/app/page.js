@@ -1,4 +1,5 @@
 "use client";
+import "./globals.css"
 import React, { useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
@@ -9,6 +10,7 @@ import ToolStack from "@/components/ToolStack";
 import ContactContainer from "@/components/ContactContainer";
 import GithubContribution from "@/components/GithubContribution";
 import Footer from "@/components/Footer";
+import Techstack from "@/components/TechStack";
 
 const OPTIONS = { loop: true };
 const arr = [
@@ -45,9 +47,12 @@ export default function Page() {
       <HomeCarousel />
       <About />
       <ExpertContainer />
-      <h1 className="text-center text-5xl mt-12">Tools I use</h1>
+      <h1 className="text-center text-5xl mt-12">Tools <span className="text-[#adadad] nunito">I use</span></h1>
       <ToolStack />
       <ProjectSlider slides={arr} options={OPTIONS} />
+      <h1 className="text-center text-5xl mt-12">Skillset <span className="nunito text-[#adadad]">I work with</span></h1>
+      <Techstack />
+      <h1 className="text-5xl mt-12 w-full">Github Contribution activity</h1>
       <GithubContribution />
       <ContactContainer />
       <Footer />
