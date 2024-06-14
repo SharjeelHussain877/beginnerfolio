@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css"
+import "./globals.css";
 import React, { useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
@@ -42,17 +42,23 @@ const arr = [
 
 export default function Page() {
   return (
-    <div className="flex items-center flex-col mx-auto max-w-screen-xl">
+    <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar />
       <HomeCarousel />
       <About />
       <ExpertContainer />
-      <h1 className="text-center text-5xl mt-12 nunito">Tools <span className="text-[#adadad]">I use</span></h1>
+      <h1 className="text-center text-5xl mt-12 nunito p-8 md:p-0">
+        Tools <span className="text-[#adadad]">I use</span>
+      </h1>
       <ToolStack />
-      <ProjectSlider slides={arr} options={OPTIONS} />
-      <h1 className="text-center text-5xl mt-12 nunito">Skillset <span className="text-[#adadad]">I work with</span></h1>
+      <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
+        Skillset <span className="text-[#adadad]">I work with</span>
+      </h1>
       <Techstack />
-      <h1 className="text-5xl mt-12 w-full">Github Contribution activity</h1>
+      <ProjectSlider slides={arr} options={OPTIONS} />
+      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 md:p-0">
+        Github Contribution activity
+      </h1>
       <GithubContribution />
       <ContactContainer />
       <Footer />

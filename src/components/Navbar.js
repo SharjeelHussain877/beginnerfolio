@@ -18,10 +18,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-    CodeBracketSquareIcon,
-    GiftIcon
-} from "@heroicons/react/24/solid";
+import { CodeBracketSquareIcon, GiftIcon } from "@heroicons/react/24/solid";
 
 const navListMenuItems = [
   {
@@ -124,7 +121,9 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
+          Home
+        </ListItem>
       </Typography>
       <Typography
         as="a"
@@ -133,7 +132,9 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">About us</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
+          About us
+        </ListItem>
       </Typography>
       <NavListMenu />
       <Typography
@@ -162,7 +163,7 @@ export default function NavigationBar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-4 py-2 shadow-none border-none">
+    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -176,12 +177,7 @@ export default function NavigationBar() {
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Avatar
-            src="/logo.png"
-            alt="avatar"
-            variant="rounded"
-            size="sm"
-          />
+          <Avatar src="/logo.png" alt="avatar" variant="rounded" size="sm" />
         </div>
         <IconButton
           variant="text"
@@ -199,7 +195,7 @@ export default function NavigationBar() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-        <Avatar
+          <Avatar
             src="https://docs.material-tailwind.com/img/face-2.jpg"
             alt="avatar"
             variant="rounded"
@@ -210,4 +206,3 @@ export default function NavigationBar() {
     </Navbar>
   );
 }
-

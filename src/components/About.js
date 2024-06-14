@@ -6,7 +6,7 @@ import { Typography, Button } from "@material-tailwind/react";
 function About() {
   return (
     <React.Fragment>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-screen-xl w-full p-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-screen-2xl w-full p-8">
         <div className="col-span-2">
           <Typography
             variant="h1"
@@ -14,7 +14,10 @@ function About() {
           >
             About Me
           </Typography>
-          <Typography variant="lead" className="mb-12 opacity-80 text-gray-700 nunito">
+          <Typography
+            variant="lead"
+            className="mb-12 opacity-80 text-gray-700 nunito"
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -27,7 +30,9 @@ function About() {
           </Typography>
           <div className="flex gap-2">
             <Button className="nunito">Show more</Button>
-            <Button variant="outlined" className="nunito">Show more</Button>
+            <Button variant="outlined" className="nunito">
+              Show more
+            </Button>
           </div>
         </div>
         <div>

@@ -130,8 +130,8 @@ function ExpertContainer() {
     autoplay: true,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -161,14 +161,14 @@ function ExpertContainer() {
   };
 
   return (
-    <div className="slider-container w-full p-8">
+    <div className="slider-container w-full max-w-screen-2xl p-8">
       <Slider {...settings}>
         {myExpertise.map((elem, index) => (
-            <ExpertiseCard
-              key={index}
-              title={elem.title}
-              description={elem.description}
-            />
+          <ExpertiseCard
+            key={index}
+            title={elem.title}
+            description={elem.description}
+          />
         ))}
       </Slider>
     </div>

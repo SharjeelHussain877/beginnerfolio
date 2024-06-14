@@ -3,7 +3,7 @@ import GitHubCalendar from "react-github-calendar";
 
 function GithubContribution() {
   return (
-    <div className="p-8 max-w-screen-xl w-full sm:w-3/4 md:w-11/12 lg:w-full">
+    <div className="p-8 max-w-screen-2xl w-full sm:w-3/4 md:w-11/12 lg:w-full flex justify-center">
       <GitHubCalendar
         username="SharjeelHussain877"
         blockMargin={8}

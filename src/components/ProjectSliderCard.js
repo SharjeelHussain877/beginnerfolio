@@ -9,7 +9,7 @@ import {
 
 export default function ProjectSliderCard({ data }) {
   return (
-    <Card className="w-full md:flex-row flex-col hover:cursor-pointer hover:scale-105">
+    <Card className="w-full md:flex-row flex-col hover:cursor-pointer hover:scale-110 m-8">
       <CardHeader
         shadow={false}
         floated={false}
@@ -28,7 +28,10 @@ export default function ProjectSliderCard({ data }) {
         <Typography variant="h4" color="blue-gray" className="mb-2 nunito">
           {data.title}
         </Typography>
-        <Typography color="gray" className="mb-8 font-normal nunito select-none	">
+        <Typography
+          color="gray"
+          className="mb-8 font-normal nunito select-none	"
+        >
           {data.description}
         </Typography>
         <a href="#" className="inline-block">

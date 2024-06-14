@@ -5,7 +5,7 @@ import { Typography } from "@material-tailwind/react";
 
 function ContactContainer() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-screen-xl w-full py-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-screen-2xl w-full py-8">
       <div className="flex flex-col justify-center items-center p-4">
         <Typography variant={"h2"} className="w-full md:w-[60%] nunito">
           Let's chat.
@@ -21,7 +21,9 @@ function ContactContainer() {
           <div>
             <span className="nunito">Mail me at</span>
             <br />
-            <span className="nunito font-semibold">sharjeelhussain877@gmail.com</span>
+            <span className="nunito font-semibold">
+              sharjeelhussain877@gmail.com
+            </span>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const theme = {
 
 export default function HomeCarousel() {
   return (
-    <Carousel className="max-w-screen-xl rounded-md" {...theme.carousel.defaultProps}>
+    <Carousel className="max-w-screen-3xl rounded-md" {...theme.carousel.defaultProps}>
       <div className="relative w-full h-[100vh] md:h-auto">
         <img
           src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
