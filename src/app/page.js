@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
 import About from "@/components/About";
@@ -41,7 +41,6 @@ const projects = [
 ];
 
 export default function Page() {
-
 
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
