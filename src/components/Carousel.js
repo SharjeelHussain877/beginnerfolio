@@ -112,8 +112,10 @@ export default function HomeCarousel() {
               color="white"
               className="mb-12 opacity-80 nunito"
             >
-              
-I begin by thoroughly researching project goals and user needs, creating detailed plans and prototypes for intuitive, accessible designs. Utilizing modern tools and stakeholder feedback, I iterate to deliver exceptional user experiences.
+              I begin by thoroughly researching project goals and user needs,
+              creating detailed plans and prototypes for intuitive, accessible
+              designs. Utilizing modern tools and stakeholder feedback, I
+              iterate to deliver exceptional user experiences.
             </Typography>
             {/* <div className="flex justify-center gap-2">
               <Button size="lg" color="white">

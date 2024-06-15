@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
 import About from "@/components/About";
@@ -11,6 +11,7 @@ import ContactContainer from "@/components/ContactContainer";
 import GithubContribution from "@/components/GithubContribution";
 import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
+import { Button } from "@material-tailwind/react";
 
 const OPTIONS = { loop: true };
 const projects = [
@@ -42,11 +43,21 @@ const projects = [
 
 export default function Page() {
 
+  const ref = useRef(null)
+
+  const scrollAbout =() => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
-      <NavigationBar />
+      <NavigationBar scrollAbout={scrollAbout} />
       <HomeCarousel />
+      <span ref={ref}>
       <About />
+      </span>
       <ExpertContainer />
       <h1 className="text-center text-5xl mt-12 nunito p-8 md:p-0">
         Tools <span className="text-[#adadad]">I use</span>
