@@ -9,7 +9,7 @@ import {
 
 export default function ProjectSliderCard({ data }) {
   return (
-    <Card className="w-full md:flex-row flex-col hover:cursor-pointer hover:scale-110 m-8">
+    <Card className="w-full md:flex-row flex-col hover:cursor-pointer hover:scale-105 m-8">
       <CardHeader
         shadow={false}
         floated={false}

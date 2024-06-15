@@ -3,7 +3,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 6; /* number of lines to show */
+  -webkit-line-clamp: 4; /* number of lines to show */
   /* fallback for browsers that do not support -webkit-line-clamp */
   max-height: calc(
     1.2em * 8

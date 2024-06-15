@@ -16,7 +16,7 @@ export default function Footer() {
               as="a"
               href="#"
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
             >
               About Us
             </Typography>
@@ -26,9 +26,9 @@ export default function Footer() {
               as="a"
               href="#"
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
             >
-              License
+              Expretise
             </Typography>
           </li>
           <li>
@@ -36,7 +36,7 @@ export default function Footer() {
               as="a"
               href="#"
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
             >
               Contribute
             </Typography>
@@ -46,7 +46,7 @@ export default function Footer() {
               as="a"
               href="#"
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
             >
               Contact Us
             </Typography>

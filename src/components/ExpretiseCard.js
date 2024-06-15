@@ -20,20 +20,25 @@ export default function ExpertiseCard({ title, description }) {
   return (
     <>
       <Card className="max-w-86 m-2 bg-white shadow-md bg-clip-border justify-between hover:cursor-pointer hover:bg-gray-900 group">
-  <CardBody>
-    <Typography variant="h5" color="blue-gray" className="mb-2 nunito group-hover:text-white">
-      {title}
-    </Typography>
-    <Typography className="tailwing nunito">
-      {description}
-    </Typography>
-  </CardBody>
-  <CardFooter className="pt-0">
-    <Button onClick={handleOpen} className="nunito group-hover:bg-gray-700 group-hover:text-white">
-      Read More
-    </Button>
-  </CardFooter>
-</Card>
+        <CardBody>
+          <Typography
+            variant="h5"
+            color="blue-gray"
+            className="mb-2 nunito group-hover:text-white"
+          >
+            {title}
+          </Typography>
+          <Typography className="tailwing nunito">{description}</Typography>
+        </CardBody>
+        <CardFooter className="pt-0">
+          <Button
+            onClick={handleOpen}
+            className="nunito group-hover:bg-gray-700 group-hover:text-white"
+          >
+            Read More
+          </Button>
+        </CardFooter>
+      </Card>
       <Dialog
         open={open}
         handler={handleOpen}

@@ -2,6 +2,7 @@
 import React from "react";
 import Form from "./Form";
 import { Typography } from "@material-tailwind/react";
+import { HiOutlineMail } from "react-icons/hi";
 
 function ContactContainer() {
   return (
@@ -16,8 +17,9 @@ function ContactContainer() {
         </Typography>
         <div className="flex gap-4 mt-4">
           <span className="h-12 w-12 bg-gray-100 flex items-center justify-center rounded-full">
-            <i className="fa-regular fa-envelope"></i>
-          </span>
+            {/* <i className="fa-regular fa-envelope"></i> */}
+            <HiOutlineMail size={20}/>
+            </span>
           <div>
             <span className="nunito">Mail me at</span>
             <br />

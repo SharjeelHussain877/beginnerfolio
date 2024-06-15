@@ -31,26 +31,23 @@ export default function HomeCarousel() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl nunito"
             >
-              The Beauty of Nature
+              How I Write Code
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80 nunito"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+              When I write code, I focus on clarity, efficiency, and maintainability. I start by thoroughly understanding the problem and planning the solution. I follow best practices and write clean, well-documented code that is easy to read and understand. I prioritize modularity, breaking down complex problems into smaller, manageable components. I also ensure my code is optimized for performance and scalability. Testing is a crucial part of my process to catch and fix issues early. Finally, I constantly review and refactor my code to improve its quality and maintainability.
             </Typography>
-            <div className="flex justify-center gap-2">
+            {/* <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
                 Explore
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -67,26 +64,23 @@ export default function HomeCarousel() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl nunito"
             >
-              The Beauty of Nature
+              How I Design User Interfaces
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80 nunito"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+              When I design user interfaces, I prioritize creating intuitive, visually appealing, and user-friendly experiences. I start by understanding the user's needs and project requirements, then sketch out wireframes and mockups to establish a clear design flow. I ensure consistency and usability by following design principles and best practices. Utilizing frameworks like Tailwind CSS and Material-UI, I create responsive and accessible designs that work seamlessly across devices. I value feedback and involve stakeholders early in the process to refine and enhance the design, aiming for interfaces that are both beautiful and functional.
             </Typography>
-            <div className="flex justify-center gap-2">
+            {/* <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
                 Explore
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -103,26 +97,24 @@ export default function HomeCarousel() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl nunito"
             >
-              The Beauty of Nature
+              How I Plan to Design Applications
+
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80 nunito"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+              When designing applications, I start by understanding the project's goals and user needs through thorough research and stakeholder discussions. I create a detailed plan with user personas, user journeys, and feature lists to guide the design. I then develop wireframes and prototypes to visualize the layout and flow, prioritizing usability, consistency, and accessibility. I use modern design tools and frameworks to ensure the interfaces are responsive and visually appealing. I involve stakeholders and users early in the process to gather feedback and make iterative improvements, aiming to deliver an application that provides an exceptional user experience.
             </Typography>
-            <div className="flex justify-center gap-2">
+            {/* <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
                 Explore
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
 import About from "@/components/About";
@@ -13,34 +13,36 @@ import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
 
 const OPTIONS = { loop: true };
-const arr = [
+const projects = [
   {
     image:
-      "https://www.hyundai.com/content/dam/hyundai/ww/en/images/find-a-car/pip/cars/sonata-dn8-2023/highlights/gallery/dn8-highlights-gallery-6-left-sideview-gray-sonata.jpg",
-    title: "Hyundai Sonata",
+      "/tour.png",
+    title: "Morocco Tour",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
-    type: "job",
+    type: "web app",
   },
   {
     image:
-      "https://di-uploads-pod27.dealerinspire.com/patriothyundaiofbartlesville/uploads/2021/12/The-New-2022-Hyundai-Sonata.jpg",
-    title: "Hyundai Sonata",
+      "/landing.png",
+    title: "OST",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
-    type: "job",
+    type: "landing page",
   },
   {
     image:
-      "https://hips.hearstapps.com/hmg-prod/images/2024-hyundai-sonata-n-line-101-64ef8c4d94261.jpg?crop=0.864xw:0.791xh;0.0765xw,0.0791xh&resize=980:*",
-    title: "Hyundai Sonata",
+      "/e-commerce.png",
+    title: "E-Commerce",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
-    type: "job",
+    type: "web app",
   },
 ];
 
 export default function Page() {
+
+
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar />
@@ -55,8 +57,11 @@ export default function Page() {
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
       <Techstack />
-      <ProjectSlider slides={arr} options={OPTIONS} />
-      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 md:p-0">
+      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0">
+        Projects
+      </h1>
+      <ProjectSlider slides={projects} options={OPTIONS} />
+      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0">
         Github Contribution activity
       </h1>
       <GithubContribution />

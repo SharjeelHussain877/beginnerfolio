@@ -31,6 +31,11 @@ const navListMenuItems = [
     description: "Meet and learn about our dedication",
     icon: GiftIcon,
   },
+  {
+    title: "ToolStack",
+    description: "What tools we use to build  dynamic site",
+    icon: GiftIcon,
+  },
 ];
 
 function NavListMenu() {
@@ -171,7 +176,7 @@ export default function NavigationBar() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina"
         >
-          Sharjeel Hussain
+          {`<Sharjeel Hussain />`}
         </Typography>
         <div className="hidden lg:block nunito">
           <NavList />
@@ -196,7 +201,7 @@ export default function NavigationBar() {
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Avatar
-            src="https://docs.material-tailwind.com/img/face-2.jpg"
+            src="/logo.png"
             alt="avatar"
             variant="rounded"
             size="sm"

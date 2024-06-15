@@ -1,63 +1,18 @@
-// "use client";
-// import React from "react";
-// import ExpertiseCard from "./ExpretiseCard";
-
-// let myExpertise = [
-//   {
-//     title: "MongoDB",
-//     description:
-//       "Proficient in using MongoDB for creating and managing databases, designing schemas, and optimizing queries for efficient data retrieval in web applications.",
-//   },
-//   {
-//     title: "Express.js",
-//     description:
-//       "Experienced in building robust backend services and APIs using Express.js, implementing middleware for request handling, and ensuring seamless communication between the server and the client.",
-//   },
-//   {
-//     title: "React.js",
-//     description:
-//       "Skilled in developing dynamic and responsive user interfaces with React.js, utilizing state management with Redux, and implementing hooks for efficient component lifecycle management.",
-//   },
-//   {
-//     title: "Node.js",
-//     description:
-//       "Adept at using Node.js for server-side development, creating scalable network applications, and leveraging its non-blocking I/O model for high-performance solutions.",
-//   },
-// ];
-
-// function ExpertContainer() {
-//   return (
-//     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 max-w-screen-xl w-full py-8">
-//       {myExpertise.map((elem, index) => (
-//         <ExpertiseCard
-//           key={index}
-//           title={elem.title}
-//           description={elem.description}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default ExpertContainer;
-
 "use client";
 import React from "react";
+import Slider from "react-slick";
 import ExpertiseCard from "./ExpretiseCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
 let myExpertise = [
   {
-    title: "MongoDB",
-    description:
-      "Proficient in using MongoDB for creating and managing databases, designing schemas, and optimizing queries for efficient data retrieval in web applications.",
+    title: "JavaScript",
+    description: "JavaScript is the heart of web development, and I'm skilled in using it to bring websites to life. Whether it's for creating interactive elements, handling events, or manipulating the DOM, I rely on JavaScript to make web pages dynamic and user-friendly."
   },
   {
-    title: "Express.js",
-    description:
-      "Experienced in building robust backend services and APIs using Express.js, implementing middleware for request handling, and ensuring seamless communication between the server and the client.",
+    title: "Firebase",
+    description: "Firebase is a powerful tool for building and managing web applications. I'm experienced in using Firebase for real-time database management, authentication, and hosting. It helps me quickly deploy and scale applications while ensuring they remain secure and reliable."
   },
   {
     title: "React.js",
@@ -65,9 +20,24 @@ let myExpertise = [
       "Skilled in developing dynamic and responsive user interfaces with React.js, utilizing state management with Redux, and implementing hooks for efficient component lifecycle management.",
   },
   {
-    title: "Node.js",
+    title: "Tailwind CSS",
     description:
-      "Adept at using Node.js for server-side development, creating scalable network applications, and leveraging its non-blocking I/O model for high-performance solutions.",
+      "Tailwind CSS is a utility-first CSS framework that I use to style my applications. It allows me to quickly apply styles directly in the HTML without leaving my markup. This approach speeds up the development process and makes my designs more consistent and responsive.",
+  },
+  {
+    title: "Material-UI (MUI)",
+    description:
+      "Material-UI provides pre-designed components that help me build beautiful, consistent interfaces with ease. Using MUI, I can implement Google's Material Design principles in my applications, ensuring a great user experience and visual appeal.",
+  },
+  {
+    title: "Redux",
+    description:
+      "Redux is essential for managing state in complex applications. I use Redux to handle the state of my React applications efficiently, ensuring that data flows smoothly and predictably throughout the app. This makes debugging easier and helps maintain a consistent state across components.",
+  },
+  {
+    title: "Next.js",
+    description:
+      "Next.js is a powerful framework that allows me to create server-rendered React applications. It enhances performance and SEO capabilities, making my web applications faster and more discoverable. With Next.js, I can build full-stack applications with ease.",
   },
   {
     title: "Node.js",
@@ -75,9 +45,19 @@ let myExpertise = [
       "Adept at using Node.js for server-side development, creating scalable network applications, and leveraging its non-blocking I/O model for high-performance solutions.",
   },
   {
-    title: "Node.js",
+    title: "Express.js",
     description:
-      "Adept at using Node.js for server-side development, creating scalable network applications, and leveraging its non-blocking I/O model for high-performance solutions.",
+      "Experienced in building robust backend services and APIs using Express.js, implementing middleware for request handling, and ensuring seamless communication between the server and the client.",
+  },
+  {
+    title: "MongoDB",
+    description:
+      "Proficient in using MongoDB for creating and managing databases, designing schemas, and optimizing queries for efficient data retrieval in web applications.",
+  },
+  {
+    title: "React Native",
+    description:
+      "React Native allows me to build mobile applications using the same principles I apply in web development with React. I use React Native to create cross-platform mobile apps that run smoothly on both iOS and Android, providing a native look and feel with a single codebase.",
   },
 ];
 
