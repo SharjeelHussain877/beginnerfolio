@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { FiTwitter } from "react-icons/fi";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaInstagramSquare, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
+
 
 function ProfileCard() {
   return (
@@ -34,13 +35,20 @@ function ProfileCard() {
           className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-light-blue-600 to-light-blue-400"
         >
           {/* <i className="fab fa-twitter" aria-hidden="true"></i> */}
-          <FiTwitter size={18} color="#212121"/>
+          <FaLinkedin size={18} color="#212121"/>
+        </a>
+        <a
+          href="#facebook"
+          className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-blue-400"
+        >
+          {/* <i className="fab fa-facebook" aria-hidden="true"></i> */}
+          <FaInstagramSquare size={18} color="#212121"/>
         </a>
         <a
           href="#instagram"
           className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-purple-400"
         >
-          <FaInstagram size={18} color="#212121"/>
+          <FaGithub size={18} color="#212121"/>
           {/* <i className="fab fa-instagram" aria-hidden="true"></i> */}
         </a>
       </div>

@@ -11,29 +11,27 @@ import ContactContainer from "@/components/ContactContainer";
 import GithubContribution from "@/components/GithubContribution";
 import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
-import { Button } from "@material-tailwind/react";
+import Education from "@/components/Education";
+import Experience from "@/components/Experiece";
 
 const OPTIONS = { loop: true };
 const projects = [
   {
-    image:
-      "/tour.png",
+    image: "/tour.png",
     title: "Morocco Tour",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
     type: "web app",
   },
   {
-    image:
-      "/landing.png",
+    image: "/landing.png",
     title: "OST",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
     type: "landing page",
   },
   {
-    image:
-      "/e-commerce.png",
+    image: "/e-commerce.png",
     title: "E-Commerce",
     description:
       "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
@@ -42,22 +40,25 @@ const projects = [
 ];
 
 export default function Page() {
+  const ref = useRef(null);
 
-  const ref = useRef(null)
-
-  const scrollAbout =() => {
+  const scrollAbout = () => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }
+  };
 
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar scrollAbout={scrollAbout} />
       <HomeCarousel />
       <span ref={ref}>
-      <About />
+        <About />
       </span>
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-3xl p-8">
+        <Education />
+        <Experience />
+      </div>
       <ExpertContainer />
       <h1 className="text-center text-5xl mt-12 nunito p-8 md:p-0">
         Tools <span className="text-[#adadad]">I use</span>
