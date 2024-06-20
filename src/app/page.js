@@ -55,7 +55,7 @@ export default function Page() {
       <span ref={ref}>
         <About />
       </span>
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-3xl p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-3xl p-8">
         <Education />
         <Experience />
       </div>

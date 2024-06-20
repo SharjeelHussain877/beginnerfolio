@@ -16,7 +16,7 @@ import {
 
 export default function Education() {
   return (
-    <div className="w-[32rem]">
+    <div className="w-auto">
       <Typography variant="h2" className="pb-4 nunito">
         Education
       </Typography>
