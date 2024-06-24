@@ -22,25 +22,32 @@ import { CodeBracketSquareIcon, GiftIcon } from "@heroicons/react/24/solid";
 
 const navListMenuItems = [
   {
-    title: "Projects",
+    title: "projects",
     description: "Find the perfect solution for your needs.",
     icon: CodeBracketSquareIcon,
   },
   {
-    title: "Techstack",
+    title: "techstack",
     description: "Meet and learn about our dedication",
     icon: GiftIcon,
   },
   {
-    title: "ToolStack",
+    title: "toolStack",
     description: "What tools we use to build  dynamic site",
     icon: GiftIcon,
   },
 ];
 
-function NavListMenu() {
+function NavListMenu({ scrollFunction }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  function foo(sec_name) {
+    if (sec_name === "projects") scrollFunction?.["projects"]();
+    if (sec_name === "techstack") scrollFunction?.["techstack"]();
+    if (sec_name === "toolstack") scrollFunction?.["toolstack"]();
+  }
+
   const renderItems = navListMenuItems.map(
     ({ icon, title, description }, key) => (
       <a href="#" key={key}>
@@ -55,7 +62,7 @@ function NavListMenu() {
             <Typography
               variant="h6"
               color="blue-gray"
-              className="flex items-center text-sm font-bold nunito"
+              className="flex items-center text-sm font-bold capitalize nunito"
             >
               {title}
             </Typography>
@@ -105,7 +112,81 @@ function NavListMenu() {
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
-            {renderItems}
+            <span onClick={() => foo("projects")}>
+              <MenuItem className="flex items-center gap-3 rounded-lg">
+                <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+                  {React.createElement(CodeBracketSquareIcon, {
+                    strokeWidth: 2,
+                    className: "h-6 text-gray-900 w-6",
+                  })}
+                </div>
+                <div>
+                  <Typography
+                    variant="h6"
+                    color="blue-gray"
+                    className="flex items-center text-sm font-bold capitalize nunito"
+                  >
+                    projects
+                  </Typography>
+                  <Typography
+                    variant="paragraph"
+                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                  >
+                    Find the perfect solution for your needs.
+                  </Typography>
+                </div>
+              </MenuItem>
+            </span>
+            <span onClick={() => foo("techstack")}>
+              <MenuItem className="flex items-center gap-3 rounded-lg">
+                <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+                  {React.createElement(GiftIcon, {
+                    strokeWidth: 2,
+                    className: "h-6 text-gray-900 w-6",
+                  })}
+                </div>
+                <div>
+                  <Typography
+                    variant="h6"
+                    color="blue-gray"
+                    className="flex items-center text-sm font-bold capitalize nunito"
+                  >
+                    techstack
+                  </Typography>
+                  <Typography
+                    variant="paragraph"
+                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                  >
+                    Meet and learn about our dedication.
+                  </Typography>
+                </div>
+              </MenuItem>
+            </span>
+            <span onClick={() => foo("toolstack")}>
+              <MenuItem className="flex items-center gap-3 rounded-lg">
+                <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+                  {React.createElement(GiftIcon, {
+                    strokeWidth: 2,
+                    className: "h-6 text-gray-900 w-6",
+                  })}
+                </div>
+                <div>
+                  <Typography
+                    variant="h6"
+                    color="blue-gray"
+                    className="flex items-center text-sm font-bold capitalize nunito"
+                  >
+                    toolstack
+                  </Typography>
+                  <Typography
+                    variant="paragraph"
+                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                  >
+                    What tools we use to build dynamic site.
+                  </Typography>
+                </div>
+              </MenuItem>
+            </span>
           </ul>
         </MenuList>
       </Menu>
@@ -116,7 +197,14 @@ function NavListMenu() {
   );
 }
 
-function NavList() {
+function NavList({ scrollFunction }) {
+  // console.log(scrollFunction?.["about"]());
+
+  function foo(sec_name) {
+    if (sec_name === "about") scrollFunction?.["about"]();
+    if (sec_name === "contact") scrollFunction?.["contact"]();
+  }
+
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -137,11 +225,14 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
+        <ListItem
+          className="flex items-center gap-2 py-2 pr-4 nunito"
+          onClick={() => foo("about")}
+        >
           About us
         </ListItem>
       </Typography>
-      <NavListMenu />
+      <NavListMenu scrollFunction={scrollFunction} />
       <Typography
         as="a"
         href="#"
@@ -149,7 +240,10 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
+        <ListItem
+          className="flex items-center gap-2 py-2 pr-4 nunito"
+          onClick={() => foo("contact")}
+        >
           Contact Us
         </ListItem>
       </Typography>
@@ -157,7 +251,7 @@ function NavList() {
   );
 }
 
-export default function NavigationBar() {
+export default function NavigationBar({ scrollFunction }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -167,8 +261,9 @@ export default function NavigationBar() {
     );
   }, []);
 
+  // console.log(scrollFunction.scrollBottom());
   return (
-    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none">
+    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none sticky top-0 z-50 rounded-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -179,7 +274,7 @@ export default function NavigationBar() {
           {`<Sharjeel Hussain />`}
         </Typography>
         <div className="hidden lg:block nunito">
-          <NavList />
+          <NavList scrollFunction={scrollFunction} />
         </div>
         <div className="hidden gap-2 lg:flex">
           <Avatar src="/logo.png" alt="avatar" variant="rounded" size="sm" />
@@ -198,14 +293,9 @@ export default function NavigationBar() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <NavList />
+        <NavList scrollFunction={scrollFunction} />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Avatar
-            src="/logo.png"
-            alt="avatar"
-            variant="rounded"
-            size="sm"
-          />
+          <Avatar src="/logo.png" alt="avatar" variant="rounded" size="sm" />
         </div>
       </Collapse>
     </Navbar>

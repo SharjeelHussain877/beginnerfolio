@@ -11,20 +11,25 @@
 
 /* styles/globals.css */
 @font-face {
-  font-family: 'Agustina Regular';
-  src: url('/fonts/Agustina-Signature.otf') format('truetype');
+  font-family: "Agustina Regular";
+  src: url("/fonts/Agustina-Signature.otf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-family: "Nunito";
+  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
 }
 
 .agustina {
-  font-family: 'Agustina Regular';
+  font-family: "Agustina Regular";
 }
 .nunito {
-  font-family: 'Nunito', sans-serif !important;
+  font-family: "Nunito", sans-serif !important;
+}
+
+.slick-dots > * {
+  /* margin: 0 !important; */
+  margin: 0px !important;
 }
