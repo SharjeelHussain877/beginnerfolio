@@ -1,6 +1,47 @@
-import React from "react";
+import React, { useEffect,useRef } from "react";
+import emailjs from '@emailjs/browser';
+
 
 function Form() {
+  const form = useRef();
+  
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  // useEffect(() => {
+  //   (function () {
+  //     emailjs.init({
+  //       publicKey: "8Cwvsof5QtYu4nIGq",
+  //     });
+  //   })();
+  // }, [])
+
+  // function send () {
+  //   emailjs.sendForm('beginnerfolio', 'template_1nwrqv3', '#myForm').then(
+  //     (response) => {
+  //       console.log('SUCCESS!', response.status, response.text);
+  //     },
+  //     (error) => {
+  //       console.log('FAILED...', error);
+  //     },
+  //   );
+  // }
+
   return (
     <div className="relative flex flex-col text-gray-700 bg-transparent p-4 shadow-lg rounded-xl bg-clip-border w-full sm:w-auto">
       <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 nunito">
@@ -90,7 +131,7 @@ function Form() {
           className="mt-6 block w-full select-none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none nunito"
           type="button"
         >
-          sign up
+          Send ✈️
         </button>
         {/* <p className="block mt-4 font-sans text-base antialiased font-normal leading-relaxed text-center text-gray-700">
           Already have an account?

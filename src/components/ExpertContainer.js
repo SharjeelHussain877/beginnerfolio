@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
+import DemoCard from "./DemoCard";
 import ExpertiseCard from "./ExpretiseCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,11 +9,13 @@ import "slick-carousel/slick/slick-theme.css";
 let myExpertise = [
   {
     title: "JavaScript",
-    description: "JavaScript is the heart of web development, and I'm skilled in using it to bring websites to life. Whether it's for creating interactive elements, handling events, or manipulating the DOM, I rely on JavaScript to make web pages dynamic and user-friendly."
+    description:
+      "JavaScript is the heart of web development, and I'm skilled in using it to bring websites to life. Whether it's for creating interactive elements, handling events, or manipulating the DOM, I rely on JavaScript to make web pages dynamic and user-friendly.",
   },
   {
     title: "Firebase",
-    description: "Firebase is a powerful tool for building and managing web applications. I'm experienced in using Firebase for real-time database management, authentication, and hosting. It helps me quickly deploy and scale applications while ensuring they remain secure and reliable."
+    description:
+      "Firebase is a powerful tool for building and managing web applications. I'm experienced in using Firebase for real-time database management, authentication, and hosting. It helps me quickly deploy and scale applications while ensuring they remain secure and reliable.",
   },
   {
     title: "React.js",
@@ -144,11 +147,16 @@ function ExpertContainer() {
     <div className="slider-container w-full max-w-screen-2xl p-8">
       <Slider {...settings}>
         {myExpertise.map((elem, index) => (
-          <ExpertiseCard
-            key={index}
-            title={elem.title}
-            description={elem.description}
-          />
+          <>
+            {/* <ExpertiseCard
+              key={index}
+              title={elem.title}
+              description={elem.description}
+            /> */}
+            <DemoCard key={index}
+              title={elem.title}
+              description={elem.description}/>
+          </>
         ))}
       </Slider>
     </div>
