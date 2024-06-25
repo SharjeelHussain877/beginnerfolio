@@ -18,12 +18,12 @@ const theme = {
 export default function HomeCarousel() {
   return (
     <Carousel
-      className="max-w-screen-3xl rounded-md"
+      className="max-w-screen-3xl"
       {...theme.carousel.defaultProps}
     >
       <div className="relative w-full h-[100vh] md:h-auto">
         <img
-          src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/hero-1.avif"
           alt="image 1"
           className="h-[100vh] w-full object-cover"
         />
@@ -58,7 +58,7 @@ export default function HomeCarousel() {
       </div>
       <div className="relative w-full h-[100vh] md:h-auto">
         <img
-          src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/hero-2.avif"
           alt="image 1"
           className="h-[100vh] w-full object-cover"
         />
@@ -94,7 +94,7 @@ export default function HomeCarousel() {
       </div>
       <div className="relative w-full h-[100vh] md:h-auto">
         <img
-          src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/hero-3.avif"
           alt="image 1"
           className="h-[100vh] w-full object-cover"
         />

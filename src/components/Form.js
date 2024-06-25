@@ -3,12 +3,15 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Loader from "./Loader";
 import "./css/sentBtn.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Form() {
   const [load, setLoad] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     name: "",
@@ -16,12 +19,11 @@ function Form() {
     message: "",
   });
   const onSubmit = (data) => {
-    setLoad(true);
     sendEmail(data);
-    setLoad(false);
   };
-
+  
   const sendEmail = (obj) => {
+    setLoad(true);
     emailjs.init({
       publicKey: "8Cwvsof5QtYu4nIGq",
       blockHeadless: true,
@@ -34,7 +36,20 @@ function Form() {
         throttle: 10000,
       },
     });
-    emailjs.send("service_h3v51k5", "template_1nwrqv3", obj);
+    emailjs.send("service_h3v51k5", "template_1nwrqv3", obj)
+    .then((response) => {
+      toast.success("sent successfully", {
+        theme: "dark"
+      })
+      reset()
+      setLoad(false);
+    })
+    .catch((error) => {
+      setLoad(false);
+      toast.error("Your form did not send!", {
+        theme: "dark"
+      })
+      });
   };
 
   return (
@@ -66,7 +81,7 @@ function Form() {
                   message: "Name must be at least 3 characters",
                 },
               })}
-              placeholder="John Smith"
+              placeholder="john smith"
               className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#12372A] focus:border-t-transparent focus:!border-t-[#12372A] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
             />
             <span className="text-[12px] text-[#a21515]">
@@ -88,7 +103,7 @@ function Form() {
                 },
               })}
               aria-invalid={errors.mail ? "true" : "false"}
-              placeholder="john@gmail.com"
+              placeholder="abc@gmail.com"
               className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#12372A] focus:border-t-transparent focus:!border-t-[#12372A] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
             />
             <span className="text-[12px] text-[#a21515]">
@@ -120,18 +135,25 @@ function Form() {
         >
           {load ? <Loader /> : `Send ✈️`}
         </button> */}
-        <button type="submit" className="sent-btn mt-8 w-full">
-          <strong className="nunito">send ✈️</strong>
-          <div id="container-stars">
-            <div id="stars"></div>
-          </div>
+        <button type="submit" disabled={load} className="sent-btn mt-8 w-full">
+          {load ? (
+            <Loader />
+          ) : (
+            <>
+              <strong className="nunito flex items-center"> send ✈️</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
 
-          <div id="glow">
-            <div className="circle"></div>
-            <div className="circle"></div>
-          </div>
+              <div id="glow">
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+            </>
+          )}
         </button>
       </form>
+        <ToastContainer draggable/>
     </div>
   );
 }

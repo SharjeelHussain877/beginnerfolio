@@ -8,9 +8,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  HomeIcon,
-  BellIcon,
-  CurrencyDollarIcon,
   BookOpenIcon,
 } from "@heroicons/react/24/solid";
 

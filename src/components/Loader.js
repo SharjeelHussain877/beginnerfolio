@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/load.css";
 
-function Loader({ width, height }) {
+function Loader() {
   return (
-    <div className="spinner center" style={{ width: width, height: height }}>
+    <div className="spinner center">
       <div className="spinner-blade"></div>
       <div className="spinner-blade"></div>
       <div className="spinner-blade"></div>

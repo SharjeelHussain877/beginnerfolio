@@ -271,7 +271,7 @@ export default function NavigationBar({ scrollFunction }) {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina"
         >
-          {`<Sharjeel Hussain />`}
+          {`<Sharjeel`}<span className="text-[#12372A]"> Hussain </span>{`/>`}
         </Typography>
         <div className="hidden lg:block nunito">
           <NavList scrollFunction={scrollFunction} />

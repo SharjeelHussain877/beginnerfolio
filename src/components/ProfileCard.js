@@ -33,7 +33,7 @@ function ProfileCard() {
   return (
     <div className="card">
       <div className="card__img">
-        <Image src={"/banner.webp"} width={540} height={450} />
+        <Image src={"/banner.jpg"} width={540} height={450} />
       </div>
       <div className="card__avatar">
         <img
