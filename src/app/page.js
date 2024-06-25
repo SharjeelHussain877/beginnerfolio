@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
 import Education from "@/components/Education";
 import Experience from "@/components/Experiece";
+import { Typography } from "@material-tailwind/react";
 
 const OPTIONS = { loop: true };
 const projects = [
@@ -40,44 +41,79 @@ const projects = [
 ];
 
 export default function Page() {
-  const ref = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const projectRef = useRef(null);
+  const toolRef = useRef(null);
+  const techRef = useRef(null);
+  const contributionRef = useRef(null);
 
-  const scrollAbout = () => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const scrollFunction = {
+    about: () => {
+      aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    contact: () => {
+      contactRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    projects: () => {
+      projectRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    techstack: () => {
+      console.log("success");
+      techRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    toolstack: () => {
+      toolRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    contribute: () => {
+      contributionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    },
   };
 
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
-      <NavigationBar scrollAbout={scrollAbout} />
+      <NavigationBar scrollFunction={scrollFunction} />
       <HomeCarousel />
-      <span ref={ref}>
+      <span ref={aboutRef}>
         <About />
       </span>
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-3xl p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-2xl p-8">
         <Education />
         <Experience />
       </div>
       <ExpertContainer />
-      <h1 className="text-center text-5xl mt-12 nunito p-8 md:p-0">
+      <h1
+        className="text-center text-5xl mt-12 nunito p-8 md:p-0"
+        ref={toolRef}
+      >
         Tools <span className="text-[#adadad]">I use</span>
       </h1>
       <ToolStack />
-      {/* <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
+      <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
-      <Techstack /> */}
-      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0">
+      <Techstack />
+      <h1
+        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0"
+        ref={projectRef}
+      >
         Projects
       </h1>
       <ProjectSlider slides={projects} options={OPTIONS} />
-      <h1 className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0">
+      <h1
+        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0"
+        ref={contributionRef}
+      >
         Github Contribution activity
       </h1>
       <GithubContribution />
-      <ContactContainer />
-      <Footer />
+      <span ref={contactRef}>
+        <ContactContainer />
+      </span>
+      <Footer scrollFunction={scrollFunction} />
     </div>
   );
 }

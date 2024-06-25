@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
 import ProfileCard from "./ProfileCard";
-import { Typography, Button, Collapse } from "@material-tailwind/react";
+import { Typography, Collapse } from "@material-tailwind/react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import "./embla/showmore.css";
 
 function About() {
   const [open, setOpen] = React.useState(false);
-
   const toggleOpen = () => setOpen((cur) => !cur);
 
   return (
     <React.Fragment>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-screen-2xl w-full p-8">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 order-2 md:order-1 md:grid-cols-3 gap-2 max-w-screen-2xl w-full p-8">
+        <div className="col-span-2 order-3 md:order-2">
           <Typography
             variant="h1"
             className="mb-4 text-3xl md:text-4xl lg:text-5xl text-gray-900 nunito"
@@ -29,11 +29,10 @@ function About() {
             time there, I developed a strong foundation in programming and web
             development, which has been crucial in my career.
             <br />
-            <br />
-            I specialize in using modern technologies like React and Next.js.
-            With React, I build dynamic and responsive user interfaces that
-            provide an excellent user experience. Next.js allows me to create
-            powerful server-rendered applications that are fast and
+            <br />I specialize in using modern technologies like React and
+            Next.js. With React, I build dynamic and responsive user interfaces
+            that provide an excellent user experience. Next.js allows me to
+            create powerful server-rendered applications that are fast and
             SEO-friendly. I’m also proficient with various libraries and tools
             that complement these technologies, ensuring I can tackle a wide
             range of projects efficiently.
@@ -60,15 +59,15 @@ function About() {
               we can work together on your next project.
             </Typography>
           </Collapse>
-          <Button
-            className="nunito flex gap-2 items-center"
+          <button
+            className="nunito flex gap-2 items-center showmore"
             onClick={toggleOpen}
           >
-            Show more{" "}
+            Show more
             {!open ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
-          </Button>
+          </button>
         </div>
-        <div>
+        <div className="md:order-3">
           <ProfileCard />
         </div>
       </div>
