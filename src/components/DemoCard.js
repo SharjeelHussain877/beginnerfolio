@@ -21,7 +21,7 @@ function DemoCard({ title, description }) {
         <div class="notibody tailwing nunito">{description}
             <br  />
         </div>
-            {/* <button className="customButton">Read more</button> */}
+            <button className="customButton" onClick={handleOpen}>Read more</button>
         
       </div>
       <Dialog

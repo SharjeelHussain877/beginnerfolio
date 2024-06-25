@@ -92,10 +92,10 @@ export default function Page() {
         Tools <span className="text-[#adadad]">I use</span>
       </h1>
       <ToolStack />
-      <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
+      {/* <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
-      <Techstack />
+      <Techstack /> */}
       <h1
         className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0"
         ref={projectRef}
