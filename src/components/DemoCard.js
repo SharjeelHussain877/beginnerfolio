@@ -7,22 +7,24 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-import "./embla/lineClamp.css";
+import "./css/lineClamp.css";
 
 function DemoCard({ title, description }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   return (
     <>
-      <div class="notification">
-        <div class="notiglow"></div>
-        <div class="notiborderglow"></div>
-        <div class="notititle nunito">{title}</div>
-        <div class="notibody tailwing nunito">{description}
-            <br  />
+      <div className="notification">
+        <div className="notiglow"></div>
+        <div className="notiborderglow"></div>
+        <div className="notititle nunito">{title}</div>
+        <div className="notibody tailwing nunito">
+          {description}
+          <br />
         </div>
-            <button className="customButton" onClick={handleOpen}>Read more</button>
-        
+        <button className="customButton" onClick={handleOpen}>
+          Read more
+        </button>
       </div>
       <Dialog
         open={open}

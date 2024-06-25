@@ -142,21 +142,23 @@ function ExpertContainer() {
       },
     ],
   };
+  {
+    /* <ExpertiseCard
+    key={index}
+    title={elem.title}
+    description={elem.description}
+  /> */
+  }
 
   return (
     <div className="slider-container w-full max-w-screen-2xl p-8">
       <Slider {...settings}>
         {myExpertise.map((elem, index) => (
-          <>
-            {/* <ExpertiseCard
-              key={index}
-              title={elem.title}
-              description={elem.description}
-            /> */}
-            <DemoCard key={index}
-              title={elem.title}
-              description={elem.description}/>
-          </>
+          <DemoCard
+            key={index}
+            title={elem.title}
+            description={elem.description}
+          />
         ))}
       </Slider>
     </div>

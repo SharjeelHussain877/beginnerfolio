@@ -11,7 +11,7 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-import "./embla/lineClamp.css";
+import "./css/lineClamp.css";
 
 export default function ExpertiseCard({ title, description }) {
   const [open, setOpen] = useState(false);

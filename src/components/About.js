@@ -3,7 +3,7 @@ import React from "react";
 import ProfileCard from "./ProfileCard";
 import { Typography, Collapse } from "@material-tailwind/react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import "./embla/showmore.css";
+import "./css/showmore.css";
 
 function About() {
   const [open, setOpen] = React.useState(false);

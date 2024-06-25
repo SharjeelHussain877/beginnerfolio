@@ -1,36 +1,22 @@
 import React from "react";
-import './css/loader.css'
+import "./css/load.css";
 
-function Loader() {
+function Loader({ width, height }) {
   return (
-    <>
-      <div class="boxes">
-        <div class="box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </>
+    <div className="spinner center" style={{ width: width, height: height }}>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+      <div className="spinner-blade"></div>
+    </div>
   );
 }
 

@@ -16,9 +16,8 @@ export default function RootLayout({ children }) {
           src="https://kit.fontawesome.com/3b2468ae5a.js"
           crossOrigin="anonymous"
         ></script>
-        <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
-
-        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+        {/* <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script> */}
+        {/* <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script> */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Social from "./Social";
-import "./embla/profile.css";
+import "./css/profile.css";
 
 // function ProfileCard() {
 //   return (
@@ -30,8 +30,8 @@ import "./embla/profile.css";
 
 function ProfileCard() {
   return (
-    <div class="card">
-      <div class="card__img">
+    <div className="card">
+      <div className="card__img">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%">
           <rect fill="#ffffff" width="540" height="450"></rect>
           <defs>
@@ -44,8 +44,8 @@ function ProfileCard() {
               y2="100%"
               gradientTransform="rotate(222,648,379)"
             >
-              <stop offset="0" stop-color="#ffffff"></stop>
-              <stop offset="1" stop-color="#FC726E"></stop>
+              <stop offset="0" stopColor="#ffffff"></stop>
+              <stop offset="1" stopColor="#FC726E"></stop>
             </linearGradient>
             <pattern
               patternUnits="userSpaceOnUse"
@@ -56,7 +56,7 @@ function ProfileCard() {
               y="0"
               viewBox="0 0 1080 900"
             >
-              <g fill-opacity="0.5">
+              <g fillOpacity="0.5">
                 <polygon fill="#444" points="90 150 0 300 180 300"></polygon>
                 <polygon points="90 150 180 0 0 0"></polygon>
                 <polygon fill="#AAA" points="270 150 360 0 180 0"></polygon>
@@ -157,7 +157,7 @@ function ProfileCard() {
           <rect x="0" y="0" fill="url(#b)" width="100%" height="100%"></rect>
         </svg>
       </div>
-      <div class="card__avatar">
+      <div className="card__avatar">
         <img
           className="my-svg-element object-cover w-full h-full rounded-full"
           src="/myImage.jpg"
@@ -165,9 +165,9 @@ function ProfileCard() {
           // className="object-cover w-full h-full"
         />
       </div>
-      <div class="card__title">Sharjeel Hussain</div>
-      <div class="card__subtitle">Web Development</div>
-      <div class="card__wrapper">
+      <div className="card__title">Sharjeel Hussain</div>
+      <div className="card__subtitle">Web Development</div>
+      <div className="card__wrapper">
         <Social />
       </div>
     </div>
