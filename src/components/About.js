@@ -15,7 +15,7 @@ function About() {
         <div className="col-span-2 order-3 md:order-2">
           <Typography
             variant="h1"
-            className="mb-4 text-3xl md:text-4xl lg:text-5xl text-gray-900 nunito"
+            className="mb-4 text-3xl md:text-4xl lg:text-5xl text-[#12372A] nunito"
           >
             About Me
           </Typography>

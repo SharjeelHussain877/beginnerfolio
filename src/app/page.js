@@ -86,7 +86,7 @@ export default function Page() {
       </div>
       <ExpertContainer />
       <h1
-        className="text-center text-5xl mt-12 nunito p-8 md:p-0"
+        className="text-center text-5xl mt-12 nunito p-8 md:p-0 text-[#12372A]"
         ref={toolRef}
       >
         Tools <span className="text-[#adadad]">I use</span>
@@ -97,14 +97,14 @@ export default function Page() {
       </h1>
       <Techstack /> */}
       <h1
-        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0"
+        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0 text-[#12372A]"
         ref={projectRef}
       >
         Projects
       </h1>
       <ProjectSlider slides={projects} options={OPTIONS} />
       <h1
-        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0"
+        className="text-5xl mt-12 w-full max-w-screen-2xl p-4 px-4 md:py-0 text-[#12372A]"
         ref={contributionRef}
       >
         Github Contribution activity

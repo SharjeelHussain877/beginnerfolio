@@ -20,7 +20,7 @@ export default function ProjectCard() {
       </CardHeader>
       <CardBody>
         <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium">
+          <Typography color="blue-gray" className="font-medium text-[#12372A]">
             Morocco Tours
           </Typography>
           <Typography color="blue-gray" className="font-medium">

@@ -44,7 +44,7 @@
 }
 
 .card__subtitle {
-  margin-top: 10px;
+  margin-top: 2px;
   font-weight: 400;
   font-size: 15px;
   color: var(--submain-color);

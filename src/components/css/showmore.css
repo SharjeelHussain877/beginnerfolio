@@ -1,3 +1,6 @@
+:root {
+  --main-color: #12372A
+}
 .showmore {
   position: relative;
   padding: 10px 22px;
@@ -5,7 +8,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  background-color: #212121;
+  background-color: var(--main-color);
   transition: all 0.2s ease;
 }
 
@@ -27,15 +30,15 @@
 
 .showmore:hover:before {
   top: -70%;
-  background-image: radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #212121 20%, transparent 30%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #212121 15%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%);
+  background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, var(--main-color) 20%, transparent 30%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
     10% 10%, 18% 18%;
   background-position: 50% 120%;
@@ -62,13 +65,13 @@
 
 .showmore:hover::after {
   bottom: -70%;
-  background-image: radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #212121 15%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%),
-    radial-gradient(circle, #212121 20%, transparent 20%);
+  background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--main-color) 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
   background-position: 50% 0%;
   animation: greenbottomBubbles 0.6s ease;

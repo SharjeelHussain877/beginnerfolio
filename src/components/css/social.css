@@ -3,12 +3,13 @@
   list-style: none;
   /* height: 120px; */
   width: 100%;
-  /* padding-top: 40px; */
+  padding-top: 20px;
   font-family: "Poppins", sans-serif;
   justify-content: center;
 }
 
 .wrapper .icon {
+  color: #12372a;
   position: relative;
   background: #fff;
   border-radius: 50%;
@@ -83,4 +84,3 @@
   background: #e4405f;
   color: #fff;
 }
-

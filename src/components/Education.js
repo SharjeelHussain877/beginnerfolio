@@ -11,23 +11,23 @@ import {
   HomeIcon,
   BellIcon,
   CurrencyDollarIcon,
-  BookOpenIcon
+  BookOpenIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Education() {
   return (
     <div className="w-auto">
-      <Typography variant="h2" className="pb-4 nunito">
+      <Typography variant="h2" className="pb-4 nunito text-[#12372A]">
         Education
       </Typography>
       <Timeline>
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2">
+            <TimelineIcon className="p-2 bg-[#12372A]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" color="blue-gray" className="nunito">
+            <Typography variant="h5" className="nunito text-[#436850]">
               Intermediate
             </Typography>
           </TimelineHeader>
@@ -46,10 +46,10 @@ export default function Education() {
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2">
+            <TimelineIcon className="p-2 bg-[#12372A]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" color="blue-gray" className="nunito">
+            <Typography variant="h5" className="nunito text-[#436850]">
               Matriculation
             </Typography>
           </TimelineHeader>
@@ -66,13 +66,12 @@ export default function Education() {
           </TimelineBody>
         </TimelineItem>
         <TimelineItem>
-          {/* <TimelineConnector /> */}
           <TimelineHeader>
-            <TimelineIcon className="p-2">
+            <TimelineIcon className="p-2 bg-[#12372A]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" color="blue-gray" className="nunito">
-              Saylani Mass IT Training 
+            <Typography variant="h5" className="nunito text-[#436850]">
+              Saylani Mass IT Training
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">

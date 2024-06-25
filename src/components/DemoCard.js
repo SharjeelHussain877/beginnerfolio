@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./css/demo-card.css";
 import {
   Button,
   Dialog,
@@ -8,6 +7,7 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 import "./css/lineClamp.css";
+import "./css/demo-card.css";
 
 function DemoCard({ title, description }) {
   const [open, setOpen] = useState(false);
