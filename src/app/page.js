@@ -82,47 +82,20 @@ export default function Page() {
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar scrollFunction={scrollFunction} />
       <HomeCarousel />
-      <span
-        ref={aboutRef}
-        data-aos="fade-up"
-        data-aos-delay="400"
-        data-aos-duration="1200"
-        data-aos-easing="ease-in-out"
-      >
+      <span ref={aboutRef}>
         <About />
       </span>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-2xl p-8">
-        <span
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-duration="1200"
-          data-aos-easing="ease-in-out"
-        >
-          <Education />
-        </span>
-        <span
-          data-aos="fade-left"
-          data-aos-delay="200"
-          data-aos-duration="1200"
-          data-aos-easing="ease-in-out"
-        >
-          <Experience />
-        </span>
+        <Education />
+        <Experience />
       </div>
-      <span
-        data-aos="zoom-in"
-        data-aos-delay="400"
-        data-aos-duration="1200"
-        data-aos-easing="ease-in-out"
+      <h1
+        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
+        ref={techRef}
       >
-        <h1
-          className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
-          ref={techRef}
-        >
-          Technical Expertise
-        </h1>
-        <ExpertContainer />
-      </span>
+        Technical Expertise
+      </h1>
+      <ExpertContainer />
       <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
         <h1
           className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
@@ -136,34 +109,20 @@ export default function Page() {
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
       <Techstack /> */}
-      <span
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        data-aos-delay="400"
-        data-aos-easing="ease-in-out"
+      <h1
+        className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#12372A]"
+        ref={projectRef}
       >
-        <h1
-          className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#12372A]"
-          ref={projectRef}
-        >
-          Projects
-        </h1>
-        <ProjectSlider slides={projects} options={OPTIONS} />
-      </span>
-      <span
-        data-aos="fade-down-left"
-        data-aos-duration="1000"
-        data-aos-delay="400"
-        data-aos-easing="ease-in-out"
+        Projects
+      </h1>
+      <ProjectSlider slides={projects} options={OPTIONS} />
+      <h1
+        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
+        ref={contributionRef}
       >
-        <h1
-          className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
-          ref={contributionRef}
-        >
-          Github Contribution activity
-        </h1>
-        <GithubContribution />
-      </span>
+        Github Contribution activity
+      </h1>
+      <GithubContribution />
 
       <span
         ref={contactRef}
