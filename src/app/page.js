@@ -84,6 +84,13 @@ export default function Page() {
         <Education />
         <Experience />
       </div>
+
+      <h1
+        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
+        ref={techRef}
+      >
+        Technical Expertise
+      </h1>
       <ExpertContainer />
       <h1
         className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
@@ -104,7 +111,7 @@ export default function Page() {
       </h1>
       <ProjectSlider slides={projects} options={OPTIONS} />
       <h1
-        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
+        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
         ref={contributionRef}
       >
         Github Contribution activity

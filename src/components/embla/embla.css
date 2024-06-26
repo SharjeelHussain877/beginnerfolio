@@ -37,8 +37,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
-  gap: 1.2rem;
-  margin-top: 1.8rem;
+  /* margin-top: 0.2rem; */
 }
 .embla__buttons {
   display: grid;
@@ -76,11 +75,12 @@
   height: 35%;
 }
 .embla__dots {
+  padding-right: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  /* margin-right: calc((2.6rem - 1.4rem) / 2 * -1); */
 }
 .embla__dot {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);

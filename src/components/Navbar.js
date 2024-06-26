@@ -18,7 +18,11 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { CodeBracketSquareIcon, GiftIcon } from "@heroicons/react/24/solid";
+import {
+  CodeBracketSquareIcon,
+  GiftIcon,
+  WrenchIcon,
+} from "@heroicons/react/24/solid";
 
 const navListMenuItems = [
   {
@@ -34,7 +38,7 @@ const navListMenuItems = [
   {
     title: "toolStack",
     description: "What tools we use to build  dynamic site",
-    icon: GiftIcon,
+    icon: WrenchIcon,
   },
 ];
 
@@ -165,7 +169,7 @@ function NavListMenu({ scrollFunction }) {
             <span onClick={() => foo("toolstack")}>
               <MenuItem className="flex items-center gap-3 rounded-lg">
                 <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-                  {React.createElement(GiftIcon, {
+                  {React.createElement(WrenchIcon, {
                     strokeWidth: 2,
                     className: "h-6 text-gray-900 w-6",
                   })}
@@ -271,7 +275,9 @@ export default function NavigationBar({ scrollFunction }) {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina"
         >
-          {`<Sharjeel`}<span className="text-[#12372A]"> Hussain </span>{`/>`}
+          {`<Sharjeel`}
+          <span className="text-[#12372A]"> Hussain </span>
+          {`/>`}
         </Typography>
         <div className="hidden lg:block nunito">
           <NavList scrollFunction={scrollFunction} />
