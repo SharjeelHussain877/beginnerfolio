@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Social from "./Social";
-import "./css/profile.css";
 import Image from "next/image";
+import "./css/profile.css";
 
 // function ProfileCard() {
 //   return (

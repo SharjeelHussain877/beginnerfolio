@@ -34,12 +34,12 @@ function DemoCard({ title, description }) {
           unmount: { scale: 0.9, y: -100 },
         }}
       >
-        <DialogHeader className="nunito">{title}</DialogHeader>
+        <DialogHeader className="nunito text-[#12372a]">{title}</DialogHeader>
         <DialogBody className="nunito">{description}</DialogBody>
         <DialogFooter>
-          <Button variant="gradient" color="#212121" onClick={handleOpen}>
-            <span>okay</span>
-          </Button>
+          <button className="customButton nunito" onClick={handleOpen}>
+          okay
+        </button>
         </DialogFooter>
       </Dialog>
     </>

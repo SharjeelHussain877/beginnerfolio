@@ -74,7 +74,7 @@
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tooltip,
 .wrapper .twitter:hover .tooltip::before {
-  background: #1da1f2;
+  background: #0A66C2;
   color: #fff;
 }
 

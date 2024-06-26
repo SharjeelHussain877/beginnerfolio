@@ -15,6 +15,7 @@ import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
 import Education from "@/components/Education";
 import Experience from "@/components/Experiece";
+import { Parallax } from "react-parallax";
 
 const OPTIONS = { loop: true };
 const projects = [
@@ -96,15 +97,53 @@ export default function Page() {
         Technical Expertise
       </h1>
       <ExpertContainer />
-      <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-        <h1
-          className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
-          ref={toolRef}
+      {/* <div
+        className="relative bg-fixed bg-cover bg-center w-full"
+        style={{
+          backgroundImage: "url('/bg.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 flex flex-col items-center">
+          <span
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+            className="px-8 lg:p-0 max-w-screen-2xl"
+          >
+            <h1
+              className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
+              ref={toolRef}
+            >
+              Tools <span className="text-[#adadad]">I use</span>
+            </h1>
+            <ToolStack />
+          </span>
+        </div>
+      </div> */}
+       <Parallax
+      bgImage="/bg.jpg"
+      bgImageAlt="background"
+      strength={300}
+      className="w-full"
+    >
+      <div className="flex flex-col items-center">
+        <span
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+          className="px-8 lg:p-0 max-w-screen-2xl"
         >
-          Tools <span className="text-[#adadad]">I use</span>
-        </h1>
-        <ToolStack />
-      </span>
+          <h1
+            className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
+            ref={toolRef}
+          >
+            Tools <span className="text-[#adadad]">I use</span>
+          </h1>
+          <ToolStack />
+        </span>
+      </div>
+    </Parallax>
       {/* <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
