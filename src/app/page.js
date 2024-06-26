@@ -132,7 +132,7 @@ export default function Page() {
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="800"
-          className="px-8 lg:p-0 max-w-screen-2xl"
+          className="px-8 lg:p-0 max-w-screen-3xl"
         >
           <h1
             className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
