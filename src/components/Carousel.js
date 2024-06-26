@@ -17,17 +17,17 @@ const theme = {
 
 export default function HomeCarousel() {
   return (
-    <Carousel
-      className="max-w-screen-3xl"
-      {...theme.carousel.defaultProps}
-    >
+    <Carousel className="max-w-screen-3xl" {...theme.carousel.defaultProps}>
       <div className="relative w-full h-[100vh] md:h-auto">
         <img
           src="/hero-1.avif"
           alt="image 1"
           className="h-[100vh] w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+        <div
+          className="absolute inset-0 grid h-full w-full place-items-center bg-black/75"
+          data-aos="zoom-in"
+        >
           <div className="w-3/4 text-center md:w-2/4">
             <Typography
               variant="h1"

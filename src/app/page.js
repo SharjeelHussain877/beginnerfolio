@@ -1,6 +1,8 @@
 "use client";
 import "./globals.css";
-import React, { useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect, useRef, useState } from "react";
 import NavigationBar from "@/components/Navbar";
 import HomeCarousel from "@/components/Carousel";
 import About from "@/components/About";
@@ -13,7 +15,6 @@ import Footer from "@/components/Footer";
 import Techstack from "@/components/TechStack";
 import Education from "@/components/Education";
 import Experience from "@/components/Experiece";
-import { Typography } from "@material-tailwind/react";
 
 const OPTIONS = { loop: true };
 const projects = [
@@ -41,6 +42,10 @@ const projects = [
 ];
 
 export default function Page() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const projectRef = useRef(null);
@@ -77,47 +82,82 @@ export default function Page() {
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar scrollFunction={scrollFunction} />
       <HomeCarousel />
-      <span ref={aboutRef}>
+      <span
+        ref={aboutRef}
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
+      >
         <About />
       </span>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-2xl p-8">
         <Education />
         <Experience />
       </div>
-
-      <h1
-        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
-        ref={techRef}
+      <span
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out"
       >
-        Technical Expertise
-      </h1>
-      <ExpertContainer />
-      <h1
-        className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
-        ref={toolRef}
-      >
-        Tools <span className="text-[#adadad]">I use</span>
-      </h1>
-      <ToolStack />
+        <h1
+          className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
+          ref={techRef}
+        >
+          Technical Expertise
+        </h1>
+        <ExpertContainer />
+      </span>
+      <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <h1
+          className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
+          ref={toolRef}
+        >
+          Tools <span className="text-[#adadad]">I use</span>
+        </h1>
+        <ToolStack />
+      </span>
       {/* <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
         Skillset <span className="text-[#adadad]">I work with</span>
       </h1>
       <Techstack /> */}
-      <h1
-        className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#12372A]"
-        ref={projectRef}
+      <span
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-delay="400"
+        data-aos-easing="ease-in-out"
       >
-        Projects
-      </h1>
-      <ProjectSlider slides={projects} options={OPTIONS} />
-      <h1
-        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
-        ref={contributionRef}
+        <h1
+          className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#12372A]"
+          ref={projectRef}
+        >
+          Projects
+        </h1>
+        <ProjectSlider slides={projects} options={OPTIONS} />
+      </span>
+      <span
+        data-aos="fade-down-left"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+        data-aos-easing="ease-in-out"
       >
-        Github Contribution activity
-      </h1>
-      <GithubContribution />
-      <span ref={contactRef}>
+        <h1
+          className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
+          ref={contributionRef}
+        >
+          Github Contribution activity
+        </h1>
+        <GithubContribution />
+      </span>
+
+      <span
+        ref={contactRef}
+        data-aos="flip-right"
+        data-aos-duration="2000"
+        data-aos-delay="400"
+        data-aos-easing="ease-in-out"
+      >
         <ContactContainer />
       </span>
       <Footer scrollFunction={scrollFunction} />
