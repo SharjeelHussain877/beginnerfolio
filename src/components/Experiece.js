@@ -35,7 +35,9 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <strong className="capitalize">Mern stack developer: </strong>
+              <span className="capitalize text-gray-600 font-bold me-2">
+                Mern stack developer:
+              </span>
               The key to more success is to have a lot of pillows. Put it this
               way, it took me twenty five years to get these plants, twenty five
               years of blood sweat and tears, and I&apos;m never giving up,
@@ -58,9 +60,9 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <strong className="capitalize">
-                Web & mobile Application developer:{" "}
-              </strong>
+              <span className="capitalize text-gray-600 font-bold me-2">
+                Web & mobile Application developer:
+              </span>
               The key to more success is to have a lot of pillows. Put it this
               way, it took me twenty five years to get these plants, twenty five
               years of blood sweat and tears, and I&apos;m never giving up,
@@ -82,9 +84,11 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <strong className="capitalize">Frontend developer: </strong>The
-              key to more success is to have a lot of pillows. Put it this way,
-              it took me twenty five years to get these plants, twenty five
+              <span className="capitalize text-gray-600 font-bold me-2">
+                Frontend Developer:
+              </span>
+              The key to more success is to have a lot of pillows. Put it this
+              way, it took me twenty five years to get these plants, twenty five
               years of blood sweat and tears, and I&apos;m never giving up,
               I&apos;m just getting started. I&apos;m up to something. Fan luv.
             </Typography>
