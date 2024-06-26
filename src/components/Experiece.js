@@ -8,18 +8,11 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { HomeIcon } from "@heroicons/react/24/solid";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Experiece() {
-  AOS.init();
   return (
     <div
       className="w-auto"
-      data-aos="fade-left"
-      data-aos-delay="200"
-      data-aos-duration="1200"
-      data-aos-easing="ease-in-out"
     >
       <Typography variant="h2" className="pb-4 nunito text-[#12372A]">
         Experiece

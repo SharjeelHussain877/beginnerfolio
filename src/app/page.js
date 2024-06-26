@@ -92,8 +92,22 @@ export default function Page() {
         <About />
       </span>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-2xl p-8">
-        <Education />
-        <Experience />
+        <span
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <Education />
+        </span>
+        <span
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+        >
+          <Experience />
+        </span>
       </div>
       <span
         data-aos="zoom-in"
