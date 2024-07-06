@@ -283,7 +283,7 @@ export default function NavigationBar({ scrollFunction }) {
           <NavList scrollFunction={scrollFunction} />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Avatar src="/logo.png" alt="avatar" variant="rounded" size="sm" />
+          <Avatar src="/avatar.png" alt="avatar" variant="rounded" size="sm" />
         </div>
         <IconButton
           variant="text"

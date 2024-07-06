@@ -1,5 +1,11 @@
 "use client";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa";
+import { FaStackOverflow } from "react-icons/fa";
+
 
 const theme = {
   carousel: {
@@ -17,36 +23,43 @@ const theme = {
 
 export default function HomeCarousel() {
   return (
-    <main className="dark:bg-gray-800 bg-[#2C3333] relative overflow-hidden h-screen">
-    <div className="bg-[#2C3333] dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+    <main className="dark:bg-gray-800 bg-[#2C3333] relative overflow-hidden min-h-screen">
+      <div className="bg-[#2C3333] dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
         <div className="container mx-auto px-6 flex relative py-16 justify-evenly">
-            <div className="flex flex-col relative z-20 sm:basis-2/4	">
-                <span className="w-20 h-2 bg-white mb-12">
-                </span>
-                <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-[#0E8388]">
-                    Hi,
-                    <span className="text-5xl sm:text-7xl text-white">
-                        I'm Sharjeel
-                    </span>
-                </h1>
-                <p className="text-lg tracking-wider sm:tracking-normal sm:text-base text-gray-200 dark:text-white">
-                A passionate Mern Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
-                </p>
-                <div className="flex mt-8">
-                    <a href="#" className="uppercase py-2 px-4 rounded-lg bg-[#0E8388] border-2 border-transparent text-white text-md mr-4 hover:bg-[#2E4F4F]">
-                        Contact me
-                    </a>
-                    <a href="/SharjeelResume.pdf" download className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
-                        Download my resume
-                    </a>
-                </div>
+          <div className="flex flex-col relative z-20 sm:basis-2/4	">
+            <span className="w-20 h-2 bg-white mb-12">
+            </span>
+            <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-[#0E8388]">
+              Hi,
+              <span className="text-5xl sm:text-7xl text-white">
+                I'm Sharjeel
+              </span>
+            </h1>
+            <p className="text-lg tracking-wider sm:tracking-normal sm:text-base text-gray-200 dark:text-white">
+              A passionate Mern Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
+            </p>
+            <div className="flex gap-4 my-4">
+              <span className="p-2 bg-[#333333] rounded-full hover:bg-[black] cursor-pointer"><FaGithub size={24} /></span>
+              <span className="p-2 bg-[#0E76A8] rounded-full hover:bg-[black] cursor-pointer"><FaLinkedin size={24} /></span>
+              <span className="p-2 bg-[#EA4335] rounded-full hover:bg-[black] cursor-pointer"><MdEmail size={24} /></span>
+              <span className="p-2 bg-[#F48024] rounded-full hover:bg-[black] cursor-pointer"><FaStackOverflow size={24} /></span>
+              <span className="p-2 bg-[#3B5998] rounded-full hover:bg-[black] cursor-pointer"><FaFacebookF size={24} /></span>
             </div>
-            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative basis-2/4	">
-                <img src="/avatar.png" className="max-w-xs md:max-w-sm m-auto"/>
+            <div className="flex mt-8">
+              <a href="#" className="uppercase py-2 px-4 rounded-lg bg-[#0E8388] border-2 border-transparent text-white text-md mr-4 hover:bg-[#2E4F4F]">
+                Contact me
+              </a>
+              <a href="/SharjeelResume.pdf" download className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
+                Download my resume
+              </a>
             </div>
+          </div>
+          <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative basis-2/4	">
+            <img src="/hero.png" className="max-w-xs md:max-w-sm m-auto" />
+          </div>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
     // <Carousel className="max-w-screen-3xl" {...theme.carousel.defaultProps}>
     //   <div className="relative w-full h-[100vh] md:h-auto">
     //     <img
