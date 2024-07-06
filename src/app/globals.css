@@ -9,6 +9,13 @@
 }
 
 
+:root {
+  --dark: #2C3333;
+  --light: #2E4F4F;
+  --bright: #0E8388;
+  --open-bright: #CBE4DE;
+}
+
 /* styles/globals.css */
 @font-face {
   font-family: "Agustina Regular";
@@ -29,8 +36,11 @@
   font-family: "Nunito", sans-serif !important;
 }
 
+body {
+  background-color: var(--dark);
+  color: var(--open-bright);
+}
 .slick-dots > * {
-  /* margin: 0 !important; */
   margin: 0px !important;
 }
 

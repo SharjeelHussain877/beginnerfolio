@@ -55,7 +55,7 @@ function NavListMenu({ scrollFunction }) {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description }, key) => (
       <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
+        <MenuItem className="flex items-center gap-3 rounded-lg ">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {React.createElement(icon, {
               strokeWidth: 2,
@@ -94,7 +94,7 @@ function NavListMenu({ scrollFunction }) {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 nunito"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 nunito text-xl"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -114,7 +114,7 @@ function NavListMenu({ scrollFunction }) {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block md:bg-[#0E8388] border-none">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             <span onClick={() => foo("projects")}>
               <MenuItem className="flex items-center gap-3 rounded-lg">
@@ -128,13 +128,13 @@ function NavListMenu({ scrollFunction }) {
                   <Typography
                     variant="h6"
                     color="blue-gray"
-                    className="flex items-center text-sm font-bold capitalize nunito"
+                    className="flex items-center text-sm font-bold capitalize nunito text-[#2E4F4F]"
                   >
                     projects
                   </Typography>
                   <Typography
                     variant="paragraph"
-                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                    className="text-xs !font-medium text-[#2E4F4F] nunito"
                   >
                     Find the perfect solution for your needs.
                   </Typography>
@@ -153,13 +153,13 @@ function NavListMenu({ scrollFunction }) {
                   <Typography
                     variant="h6"
                     color="blue-gray"
-                    className="flex items-center text-sm font-bold capitalize nunito"
+                    className="flex items-center text-sm font-bold capitalize nunit text-[#2E4F4F]"
                   >
                     techstack
                   </Typography>
                   <Typography
                     variant="paragraph"
-                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                    className="text-xs !font-medium text-blue-gray-500 nunito text-[#2E4F4F]"
                   >
                     Meet and learn about our dedication.
                   </Typography>
@@ -178,13 +178,13 @@ function NavListMenu({ scrollFunction }) {
                   <Typography
                     variant="h6"
                     color="blue-gray"
-                    className="flex items-center text-sm font-bold capitalize nunito"
+                    className="flex items-center text-sm font-bold capitalize nunito text-[#2E4F4F]"
                   >
                     toolstack
                   </Typography>
                   <Typography
                     variant="paragraph"
-                    className="text-xs !font-medium text-blue-gray-500 nunito"
+                    className="text-xs !font-medium text-blue-gray-500 nunito text-[#2E4F4F]"
                   >
                     What tools we use to build dynamic site.
                   </Typography>
@@ -218,7 +218,7 @@ function NavList({ scrollFunction }) {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito text-xl">
           Home
         </ListItem>
       </Typography>
@@ -230,7 +230,7 @@ function NavList({ scrollFunction }) {
         className="font-medium"
       >
         <ListItem
-          className="flex items-center gap-2 py-2 pr-4 nunito"
+          className="flex items-center gap-2 py-2 pr-4 nunito text-xl"
           onClick={() => foo("about")}
         >
           About us
@@ -245,7 +245,7 @@ function NavList({ scrollFunction }) {
         className="font-medium"
       >
         <ListItem
-          className="flex items-center gap-2 py-2 pr-4 nunito"
+          className="flex items-center gap-2 py-2 pr-4 nunito text-xl"
           onClick={() => foo("contact")}
         >
           Contact Us
@@ -267,16 +267,16 @@ export default function NavigationBar({ scrollFunction }) {
 
   // console.log(scrollFunction.scrollBottom());
   return (
-    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none sticky top-0 z-50 rounded-none">
+    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none sticky top-0 z-50 rounded-none #2C3333">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina"
+          className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina text-2xl sm:text-4xl"
         >
           {`<Sharjeel`}
-          <span className="text-[#12372A]"> Hussain </span>
+          <span className="text-[#0E8388]"> Hussain </span>
           {`/>`}
         </Typography>
         <div className="hidden lg:block nunito">

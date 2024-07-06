@@ -14,17 +14,17 @@ export default function Experiece() {
     <div
       className="w-auto"
     >
-      <Typography variant="h2" className="pb-4 nunito text-[#12372A]">
+      <Typography variant="h2" className="pb-4 nunito text-[#0E8388]">
         Experiece
       </Typography>
       <Timeline>
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
               Nubit Soft
             </Typography>
           </TimelineHeader>
@@ -46,10 +46,10 @@ export default function Experiece() {
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
               SMIT
             </Typography>
           </TimelineHeader>
@@ -70,10 +70,10 @@ export default function Experiece() {
         </TimelineItem>
         <TimelineItem>
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
               The Owls Studio
             </Typography>
           </TimelineHeader>

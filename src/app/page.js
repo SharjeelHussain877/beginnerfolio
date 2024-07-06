@@ -91,42 +91,18 @@ export default function Page() {
         <Experience />
       </div>
       <h1
-        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-[#12372A]"
+        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-white"
         ref={techRef}
       >
-        Technical Expertise
+        <span className="text-[#0E8388]">Technical </span>Expertise
       </h1>
       <ExpertContainer />
-      {/* <div
-        className="relative bg-fixed bg-cover bg-center w-full"
-        style={{
-          backgroundImage: "url('/bg.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-center">
-          <span
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="800"
-            className="px-8 lg:p-0 max-w-screen-2xl"
-          >
-            <h1
-              className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
-              ref={toolRef}
-            >
-              Tools <span className="text-[#adadad]">I use</span>
-            </h1>
-            <ToolStack />
-          </span>
-        </div>
-      </div> */}
-       <Parallax
+       {/* <Parallax
       bgImage="/bg.jpg"
       bgImageAlt="background"
       strength={300}
       className="w-full"
-    >
+    > */}
       <div className="flex flex-col items-center">
         <span
           data-aos="fade-up"
@@ -135,31 +111,27 @@ export default function Page() {
           className="px-8 lg:p-0 max-w-screen-3xl"
         >
           <h1
-            className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#12372A]"
+            className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#0E8388]"
             ref={toolRef}
           >
-            Tools <span className="text-[#adadad]">I use</span>
+            Tools <span className="text-white">I use</span>
           </h1>
           <ToolStack />
         </span>
       </div>
-    </Parallax>
-      {/* <h1 className="text-center text-5xl mt-12 nunito max-w-screen-2xl p-8 md:p-0">
-        Skillset <span className="text-[#adadad]">I work with</span>
-      </h1>
-      <Techstack /> */}
+    {/* </Parallax> */}
       <h1
-        className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#12372A]"
+        className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#0E8388]"
         ref={projectRef}
       >
         Projects
       </h1>
       <ProjectSlider slides={projects} options={OPTIONS} />
       <h1
-        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-[#12372A]"
+        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-white"
         ref={contributionRef}
       >
-        Github Contribution activity
+        Github <span className="text-[#0E8388]">Contribution activity</span>
       </h1>
       <GithubContribution />
 

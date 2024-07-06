@@ -15,13 +15,13 @@ function About() {
         <div className="col-span-2 order-3 md:order-2">
           <Typography
             variant="h1"
-            className="mb-4 text-3xl md:text-4xl lg:text-5xl text-[#12372A] nunito"
+            className="mb-4 text-4xl md:text-7xl text-white nunito"
           >
-            About Me
+           <span className="text-[#0E8388]">About </span>Me
           </Typography>
           <Typography
             variant="lead"
-            className="mb-12 opacity-80 text-gray-700 nunito"
+            className="mb-12 opacity-80 text-[#CBE4DE] nunito"
           >
             I'm a web and application developer with a passion for creating
             beautiful and functional digital solutions. My journey began with my
@@ -40,7 +40,7 @@ function About() {
           <Collapse open={open}>
             <Typography
               variant="lead"
-              className="mb-12 opacity-80 text-gray-700 nunito"
+              className="mb-12 opacity-80 text-[#CBE4DE] nunito"
             >
               What I love most about my work is solving complex problems and
               turning ideas into reality. Whether it’s a sleek portfolio site or
@@ -60,7 +60,7 @@ function About() {
             </Typography>
           </Collapse>
           <button
-            className="nunito flex gap-2 items-center showmore"
+            className="nunito flex gap-2 items-center showmore !bg-[#0E8388]"
             onClick={toggleOpen}
           >
             Show more

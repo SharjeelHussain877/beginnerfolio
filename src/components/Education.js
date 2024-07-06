@@ -14,24 +14,24 @@ export default function Education() {
     <div
       className="w-auto"
     >
-      <Typography variant="h2" className="pb-4 nunito text-[#12372A]">
+      <Typography variant="h2" className="pb-4 nunito text-[#0E8388]">
         Education
       </Typography>
       <Timeline>
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
-              Intermediate
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+              Saylani Mass IT Training
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">
             <Typography
               color="gary"
-              className="font-normal text-gray-600 nunito"
+              className="font-normal text-[#CBE4DE] nunito"
             >
               The key to more success is to have a lot of pillows. Put it this
               way, it took me twenty five years to get these plants, twenty five
@@ -43,17 +43,17 @@ export default function Education() {
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
-              Matriculation
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+              Intermediate
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">
             <Typography
               color="gary"
-              className="font-normal text-gray-600 nunito"
+              className="font-normal text-[#CBE4DE] nunito"
             >
               The key to more success is to have a lot of pillows. Put it this
               way, it took me twenty five years to get these plants, twenty five
@@ -64,17 +64,17 @@ export default function Education() {
         </TimelineItem>
         <TimelineItem>
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-[#12372A]">
+            <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#436850]">
-              Saylani Mass IT Training
+            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+              Matriculation
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">
             <Typography
               color="gary"
-              className="font-normal text-gray-600 nunito"
+              className="font-normal text-[#CBE4DE] nunito"
             >
               The key to more success is to have a lot of pillows. Put it this
               way, it took me twenty five years to get these plants, twenty five

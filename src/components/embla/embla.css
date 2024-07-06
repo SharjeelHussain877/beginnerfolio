@@ -108,6 +108,6 @@
   content: "";
 }
 .embla__dot--selected:after {
-  box-shadow: inset 0 0 0 0.2rem #12372a;
-  border-color: #12372a;
+  box-shadow: inset 0 0 0 0.2rem #0E8388;
+  border-color: #0E8388;
 }

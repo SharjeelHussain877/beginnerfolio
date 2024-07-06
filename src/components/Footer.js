@@ -8,8 +8,8 @@ export default function Footer({ scrollFunction }) {
     if (sec_name === "contribute") scrollFunction?.["contribute"]();
   }
   return (
-    <footer className="w-full bg-white p-8">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
+    <footer className="w-full bg-transparent p-8">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
         <img
           // src="https://docs.material-tailwind.com/img/logo-ct-dark.png"
           src="/logo.png"
@@ -20,7 +20,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("about")}
             >
               About Us
@@ -29,7 +29,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("techstack")}
             >
               Expretise
@@ -38,7 +38,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("contribute")}
             >
               Contribute
@@ -47,7 +47,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors hover:text-[#212121] hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("contact")}
             >
               Contact us
@@ -61,7 +61,7 @@ export default function Footer({ scrollFunction }) {
       <hr className="my-8 border-blue-gray-50" />
       <Typography
         color="blue-gray"
-        className="text-center nunito font-semibold"
+        className="text-center nunito font-semibold text-[#CBE4DE]"
       >
         &copy; 2024 Sharjeel Hussain
       </Typography>
