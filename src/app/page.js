@@ -137,9 +137,8 @@ export default function Page() {
 
       <span
         ref={contactRef}
-        data-aos="flip-right"
+        data-aos="zoom-in"
         data-aos-duration="2000"
-        data-aos-delay="400"
         data-aos-easing="ease-in-out"
       >
         <ContactContainer />

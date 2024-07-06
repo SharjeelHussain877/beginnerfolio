@@ -301,7 +301,7 @@ export default function NavigationBar({ scrollFunction }) {
       <Collapse open={openNav}>
         <NavList scrollFunction={scrollFunction} />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Avatar src="/logo.png" alt="avatar" variant="rounded" size="sm" />
+          <Avatar src="/avatar.png" alt="avatar" variant="rounded" size="sm" />
         </div>
       </Collapse>
     </Navbar>

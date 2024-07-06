@@ -34,11 +34,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: calc(50% - 87px);
+  top: calc(50% - 120px);
 }
 
 .card__title {
-  margin-top: 134px;
+  margin-top: 104px;
   font-weight: 500;
   font-size: 18px;
   color: #fff;

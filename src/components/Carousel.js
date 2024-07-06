@@ -17,32 +17,32 @@ const theme = {
 
 export default function HomeCarousel() {
   return (
-    <main class="dark:bg-gray-800 bg-[#2C3333] relative overflow-hidden h-screen">
-    <div class="bg-[#2C3333] dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
-        <div class="container mx-auto px-6 flex relative py-16 justify-evenly">
-            <div class="flex flex-col relative z-20 sm:basis-2/4	">
-                <span class="w-20 h-2 bg-white mb-12">
+    <main className="dark:bg-gray-800 bg-[#2C3333] relative overflow-hidden h-screen">
+    <div className="bg-[#2C3333] dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+        <div className="container mx-auto px-6 flex relative py-16 justify-evenly">
+            <div className="flex flex-col relative z-20 sm:basis-2/4	">
+                <span className="w-20 h-2 bg-white mb-12">
                 </span>
-                <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-[#0E8388]">
+                <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-[#0E8388]">
                     Hi,
-                    <span class="text-5xl sm:text-7xl text-white">
+                    <span className="text-5xl sm:text-7xl text-white">
                         I'm Sharjeel
                     </span>
                 </h1>
-                <p class="text-sm sm:text-base text-gray-200 dark:text-white">
+                <p className="text-lg tracking-wider sm:tracking-normal sm:text-base text-gray-200 dark:text-white">
                 A passionate Mern Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
                 </p>
-                <div class="flex mt-8">
-                    <a href="#" class="uppercase py-2 px-4 rounded-lg bg-[#0E8388] border-2 border-transparent text-white text-md mr-4 hover:bg-[#2E4F4F]">
+                <div className="flex mt-8">
+                    <a href="#" className="uppercase py-2 px-4 rounded-lg bg-[#0E8388] border-2 border-transparent text-white text-md mr-4 hover:bg-[#2E4F4F]">
                         Contact me
                     </a>
-                    <a href="/SharjeelResume.pdf" download class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
+                    <a href="/SharjeelResume.pdf" download className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
                         Download my resume
                     </a>
                 </div>
             </div>
-            <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative basis-2/4	">
-                <img src="/avatar.png" class="max-w-xs md:max-w-sm m-auto"/>
+            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative basis-2/4	">
+                <img src="/avatar.png" className="max-w-xs md:max-w-sm m-auto"/>
             </div>
         </div>
     </div>

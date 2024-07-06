@@ -11,8 +11,7 @@ export default function Footer({ scrollFunction }) {
     <footer className="w-full bg-transparent p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
         <img
-          // src="https://docs.material-tailwind.com/img/logo-ct-dark.png"
-          src="/logo.png"
+          src="/avatar.png"
           alt="logo-ct"
           className="w-10"
         />
@@ -61,7 +60,7 @@ export default function Footer({ scrollFunction }) {
       <hr className="my-8 border-blue-gray-50" />
       <Typography
         color="blue-gray"
-        className="text-center nunito font-semibold text-[#CBE4DE]"
+        className="text-center nunito font-semibold text-[#CBE4DE] tracking-wider"
       >
         &copy; 2024 Sharjeel Hussain
       </Typography>

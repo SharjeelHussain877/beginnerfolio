@@ -54,7 +54,7 @@ function Form() {
 
   return (
     <div className="relative flex flex-col text-gray-700 bg-transparent p-4 shadow-lg rounded-xl bg-clip-border w-full sm:w-auto">
-      <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 nunito">
+      <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-[#0E8388] nunito">
         Send me a message 🚀
       </h4>
       <p className="block mt-1 font-sans text-base antialiased font-normal leading-relaxed text-gray-700 w-80 nunito">
@@ -65,7 +65,7 @@ function Form() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col gap-6 mb-1">
-          <h6 className="block -mb-3 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900 nunito">
+          <h6 className="block -mb-3 font-sans text-base antialiased leading-relaxed tracking-normal text-[#CBE4DE] nunito">
             Your Name <sup className="text-[#a21515]">*</sup>
           </h6>
           <div className="relative h-11 w-full min-w-[200px]">
@@ -89,7 +89,7 @@ function Form() {
             </span>
             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all before:content-none after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all after:content-none peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 nunito" />
           </div>
-          <h6 className="block -mb-3 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900 nunito">
+          <h6 className="block -mb-3 font-sans text-base antialiased leading-relaxed tracking-normal text-[#CBE4DE] nunito">
             Your Email <sup className="text-[#a21515]">*</sup>
           </h6>
           <div className="relative h-11 w-full min-w-[200px]">
@@ -111,7 +111,7 @@ function Form() {
             </span>
             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all before:content-none after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all after:content-none peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 nunito" />
           </div>
-          <h6 className="block -mb-3 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900 nunito">
+          <h6 className="block -mb-3 font-sans text-base antialiased leading-relaxed tracking-normal text-[#CBE4DE] nunito">
             Message <sup className="text-[#a21515]">*</sup>
           </h6>
           <div className="relative h-24 w-full min-w-[200px]">

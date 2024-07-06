@@ -24,7 +24,7 @@ export default function Experiece() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               Nubit Soft
             </Typography>
           </TimelineHeader>
@@ -49,7 +49,7 @@ export default function Experiece() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               SMIT
             </Typography>
           </TimelineHeader>
@@ -73,7 +73,7 @@ export default function Experiece() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <HomeIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               The Owls Studio
             </Typography>
           </TimelineHeader>

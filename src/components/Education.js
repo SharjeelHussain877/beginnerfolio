@@ -24,7 +24,7 @@ export default function Education() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               Saylani Mass IT Training
             </Typography>
           </TimelineHeader>
@@ -46,7 +46,7 @@ export default function Education() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               Intermediate
             </Typography>
           </TimelineHeader>
@@ -67,7 +67,7 @@ export default function Education() {
             <TimelineIcon className="p-2 bg-[#2E4F4F]">
               <BookOpenIcon className="h-4 w-4" />
             </TimelineIcon>
-            <Typography variant="h5" className="nunito text-[#CBE4DE]">
+            <Typography variant="h5" className="nunito text-white text-3xl">
               Matriculation
             </Typography>
           </TimelineHeader>
