@@ -62,7 +62,7 @@ function NavListMenu({ scrollFunction }) {
               className: "h-6 text-gray-900 w-6",
             })}
           </div>
-          <div>
+          <div onClick={() => foo(title)}>
             <Typography
               variant="h6"
               color="blue-gray"

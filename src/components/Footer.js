@@ -4,6 +4,7 @@ import "./embla/footerBtn.css";
 export default function Footer({ scrollFunction }) {
   function foo(sec_name) {
     if (sec_name === "about") scrollFunction?.["about"]();
+    if (sec_name === "techstack") scrollFunction?.["techstack"]();
     if (sec_name === "contact") scrollFunction?.["contact"]();
     if (sec_name === "contribute") scrollFunction?.["contribute"]();
   }
@@ -19,7 +20,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] cursor-pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("about")}
             >
               About Us
@@ -28,7 +29,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] cursor-pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("techstack")}
             >
               Expretise
@@ -37,7 +38,7 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] cursor-pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("contribute")}
             >
               Contribute
@@ -46,14 +47,11 @@ export default function Footer({ scrollFunction }) {
           <li>
             <Typography
               color="blue-gray"
-              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] pointer hover:font-bold focus:text-[#212121]"
+              className="nunito font-normal transition-colors text-[#CBE4DE] hover:text-[#212121] p-1 px-3 rounded-3xl hover:bg-[#CBE4DE] cursor-pointer hover:font-bold focus:text-[#212121]"
               onClick={() => foo("contact")}
             >
               Contact us
             </Typography>
-            {/* <button className="cta" onClick={() => foo("contact")}>
-              <span>Contact us</span>
-            </button> */}
           </li>
         </ul>
       </div>

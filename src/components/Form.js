@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Loader from "./Loader";
 import "./css/sentBtn.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
   const [load, setLoad] = useState(false);
@@ -21,7 +21,7 @@ function Form() {
   const onSubmit = (data) => {
     sendEmail(data);
   };
-  
+
   const sendEmail = (obj) => {
     setLoad(true);
     emailjs.init({
@@ -36,19 +36,20 @@ function Form() {
         throttle: 10000,
       },
     });
-    emailjs.send("service_h3v51k5", "template_1nwrqv3", obj)
-    .then((response) => {
-      toast.success("sent successfully", {
-        theme: "dark"
+    emailjs
+      .send("service_h3v51k5", "template_1nwrqv3", obj)
+      .then((response) => {
+        toast.success("sent successfully", {
+          theme: "dark",
+        });
+        reset();
+        setLoad(false);
       })
-      reset()
-      setLoad(false);
-    })
-    .catch((error) => {
-      setLoad(false);
-      toast.error("Your form did not send!", {
-        theme: "dark"
-      })
+      .catch((error) => {
+        setLoad(false);
+        toast.error("Your form did not send!", {
+          theme: "dark",
+        });
       });
   };
 
@@ -82,9 +83,9 @@ function Form() {
                 },
               })}
               placeholder="john smith"
-              className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#12372A] focus:border-t-transparent focus:!border-t-[#12372A] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
+              className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-[#CBE4DE] outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#0E8388] focus:border-t-transparent focus:!border-t-[#0E8388] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
             />
-            <span className="text-[12px] text-[#a21515]">
+            <span className="text-[12px] text-[#FD7700]">
               {errors?.name?.message}
             </span>
             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all before:content-none after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all after:content-none peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 nunito" />
@@ -104,9 +105,9 @@ function Form() {
               })}
               aria-invalid={errors.mail ? "true" : "false"}
               placeholder="abc@gmail.com"
-              className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#12372A] focus:border-t-transparent focus:!border-t-[#12372A] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
+              className="peer h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-[#CBE4DE] outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#0E8388] focus:border-t-transparent focus:!border-t-[#0E8388] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
             />
-            <span className="text-[12px] text-[#a21515]">
+            <span className="text-[12px] text-[#FD7700]">
               {errors?.email?.message}
             </span>
             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all before:content-none after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all after:content-none peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 nunito" />
@@ -121,20 +122,14 @@ function Form() {
               })}
               rows="4"
               placeholder="Write your message here..."
-              className="peer resize-y overflow-y-hidden h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#12372A] focus:border-t-transparent focus:!border-t-[#12372A] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
+              className="peer resize-y overflow-y-hidden h-full w-full rounded-md border border-[#ADBC9F] border-t-transparent !border-t-[#ADBC9F] bg-transparent px-3 py-3 font-sans text-sm font-normal text-[#CBE4DE] outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ADBC9F] placeholder-shown:border-t-[#ADBC9F] focus:border-2 focus:border-[#0E8388] focus:border-t-transparent focus:!border-t-[#0E8388] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 nunito"
             ></textarea>
-            <span className="text-[12px] text-[#a21515]">
+            <span className="text-[12px] text-[#FD7700]">
               {errors?.message?.message}
             </span>
             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all before:content-none after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all after:content-none peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500" />
           </div>
         </div>
-        {/* <button
-          className="mt-6 w-full flex items-start justify-center gap-6 select-none rounded-lg bg-[#12372A] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none nunito"
-          type="submit"
-        >
-          {load ? <Loader /> : `Send ✈️`}
-        </button> */}
         <button type="submit" disabled={load} className="sent-btn mt-8 w-full">
           {load ? (
             <Loader />
@@ -153,7 +148,7 @@ function Form() {
           )}
         </button>
       </form>
-        <ToastContainer draggable/>
+      <ToastContainer draggable />
     </div>
   );
 }
