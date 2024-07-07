@@ -82,22 +82,24 @@ export default function Page() {
   return (
     <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
       <NavigationBar scrollFunction={scrollFunction} />
-      <HomeCarousel />
-      <span ref={aboutRef}>
+        <HomeCarousel />
+      <span data-aos="fade-up" ref={aboutRef}>
         <About />
       </span>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full max-w-screen-2xl p-8">
         <Education />
         <Experience />
       </div>
-      <h1
-        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-white"
-        ref={techRef}
-      >
-        <span className="text-[#0E8388]">Technical </span>Expertise
-      </h1>
-      <ExpertContainer />
-       {/* <Parallax
+      <span data-aos="fade-up" data-aos-duration="3000">
+        <h1
+          className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-white"
+          ref={techRef}
+        >
+          <span className="text-[#0E8388]">Technical </span>Expertise
+        </h1>
+        <ExpertContainer />
+      </span>
+      {/* <Parallax
       bgImage="/bg.jpg"
       bgImageAlt="background"
       strength={300}
@@ -119,28 +121,27 @@ export default function Page() {
           <ToolStack />
         </span>
       </div>
-    {/* </Parallax> */}
-      <h1
-        className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#0E8388]"
-        ref={projectRef}
-      >
-        Projects
-      </h1>
-      <ProjectSlider slides={projects} options={OPTIONS} />
-      <h1
-        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-white"
-        ref={contributionRef}
-      >
-        Github <span className="text-[#0E8388]">Contribution activity</span>
-      </h1>
-      <GithubContribution />
+      {/* </Parallax> */}
+      <span data-aos="fade-down" data-aos-duration="1500">
+        <h1
+          className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#0E8388]"
+          ref={projectRef}
+        >
+          Projects
+        </h1>
+        <ProjectSlider slides={projects} options={OPTIONS} />
+      </span>
+      <span data-aos="zoom-in-up" data-aos-duration="1500">
+        <h1
+          className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-white"
+          ref={contributionRef}
+        >
+          Github <span className="text-[#0E8388]">Contribution activity</span>
+        </h1>
+        <GithubContribution />
+      </span>
 
-      <span
-        ref={contactRef}
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-        data-aos-easing="ease-in-out"
-      >
+      <span ref={contactRef} data-aos="zoom-in" data-aos-duration="1500">
         <ContactContainer />
       </span>
       <Footer scrollFunction={scrollFunction} />

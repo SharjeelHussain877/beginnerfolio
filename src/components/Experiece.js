@@ -33,7 +33,7 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <span className="capitalize text-gray-600 font-bold me-2">
+              <span className="capitalize text-[#CBE4DE] font-bold me-2">
                 Mern stack developer:
               </span>
               The key to more success is to have a lot of pillows. Put it this
@@ -58,7 +58,7 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <span className="capitalize text-gray-600 font-bold me-2">
+              <span className="capitalize text-[#CBE4DE] font-bold me-2">
                 Web & mobile Application developer:
               </span>
               The key to more success is to have a lot of pillows. Put it this
@@ -82,7 +82,7 @@ export default function Experiece() {
               color="gary"
               className="font-normal text-gray-600 nunito"
             >
-              <span className="capitalize text-gray-600 font-bold me-2">
+              <span className="capitalize text-[#CBE4DE] font-bold me-2">
                 Frontend Developer:
               </span>
               The key to more success is to have a lot of pillows. Put it this
