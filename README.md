@@ -1,6 +1,6 @@
-# 🌟 Beginner-Friendly Portfolio Template
+# 🌟 Beginnerfolio Template
 
-Welcome to my beginner-friendly portfolio template! This project is designed to help newcomers create their own professional portfolios with ease. Follow the instructions below to get started, and feel free to contribute!
+Welcome to my beginnerfolio template! This project is designed to help newcomers create their own professional portfolios with ease. Follow the instructions below to get started, and feel free to contribute!
 
 ## 📋 Features
 - **Easy to Use:** Simple structure and clean design.
@@ -16,7 +16,7 @@ Make sure you have Node.js and npm installed on your machine.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   https://github.com/SharjeelHussain877/beginnerfolio.git
 
 ### *Navigate to the project directory:
   cd beginnerfolio
@@ -51,9 +51,9 @@ You can also create an issue if you find a bug or have a suggestion.
 ## 📞 Contact
 If you have any questions or need further assistance, feel free to open an issue or contact me at sharjeelhussain877@gmail.com.
 
----
+___
 
-# *** Happy coding! 🎉
+# Happy coding! 🎉
 
 ___
 
