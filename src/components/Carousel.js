@@ -49,7 +49,7 @@ export default function HomeCarousel() {
               <a href="#" className="uppercase py-2 px-4 rounded-lg bg-[#0E8388] border-2 border-transparent text-white text-md mr-4 hover:bg-[#2E4F4F]">
                 Contact me
               </a>
-              <a href="/SharjeelResume.pdf" download className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
+              <a href="/myResume.pdf" download className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-[#0E8388] text-[#0E8388] dark:text-white hover:bg-[#0E8388] hover:text-white text-md">
                 Download my resume
               </a>
             </div>
