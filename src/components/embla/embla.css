@@ -62,7 +62,6 @@
   height: 3.6rem;
   z-index: 1;
   border-radius: 50%;
-  color: var(--text-body);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,6 +107,6 @@
   content: "";
 }
 .embla__dot--selected:after {
-  box-shadow: inset 0 0 0 0.2rem #0E8388;
-  border-color: #0E8388;
+  box-shadow: inset 0 0 0 0.2rem #46424f;
+  border-color: #46424f;
 }

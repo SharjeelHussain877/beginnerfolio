@@ -65,7 +65,6 @@ export default function Page() {
       projectRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     },
     techstack: () => {
-      console.log("success");
       techRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     },
     toolstack: () => {
@@ -80,9 +79,9 @@ export default function Page() {
   };
 
   return (
-    <div className="flex items-center flex-col mx-auto max-w-screen-3xl">
+    <div className="flex items-center flex-col mx-auto max-w-screen-3xl bg-custom">
       <NavigationBar scrollFunction={scrollFunction} />
-        <HomeCarousel />
+      <HomeCarousel />
       <span data-aos="fade-up" ref={aboutRef}>
         <About />
       </span>
@@ -90,14 +89,15 @@ export default function Page() {
         <Education />
         <Experience />
       </div>
-        <h1
-          className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-white"
-          ref={techRef}
-        >
-          <span className="text-[#0E8388]">Technical </span>Expertise
-        </h1>
-        <ExpertContainer />
-  
+      <h1
+        className="text-4xl md:text-5xl mt-12 w-full max-w-screen-2xl nunito px-4 md:py-0 text-white"
+        ref={techRef}
+      >
+        Technical
+        <span className="text-custom-500 ms-4">Expertise</span>
+      </h1>
+      <ExpertContainer />
+
       {/* <Parallax
       bgImage="/bg.jpg"
       bgImageAlt="background"
@@ -107,35 +107,40 @@ export default function Page() {
       <div className="flex flex-col items-center">
         <span
           data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="800"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
           className="px-8 lg:p-0 max-w-screen-3xl"
         >
           <h1
-            className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-[#0E8388]"
+            className="text-4xl md:text-5xl text-center mt-12 nunito p-8 md:p-0 text-white"
             ref={toolRef}
           >
-            Tools <span className="text-white">I use</span>
+            Tools
+            <span className="text-custom-500 ms-4">I use</span>
           </h1>
           <ToolStack />
         </span>
       </div>
       {/* </Parallax> */}
+      <div data-aos="fade-in" data-aos-duration="2500" data-aos-delay="600">
         <h1
-          className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-[#0E8388]"
+          className="text-4xl md:text-5xl md:mt-12 w-full max-w-screen-2xl px-4 md:py-0 text-white"
           ref={projectRef}
         >
           Projects
         </h1>
         <ProjectSlider slides={projects} options={OPTIONS} />
-        <h1
-          className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-white"
-          ref={contributionRef}
-        >
-          Github <span className="text-[#0E8388]">Contribution activity</span>
-        </h1>
-        <GithubContribution />
-      <span ref={contactRef} data-aos="zoom-in" data-aos-duration="1500">
+      </div>
+      <h1
+        className="text-4xl nunito md:text-5xl mt-12 w-full max-w-screen-2xl  px-4 md:py-0 text-white"
+        ref={contributionRef}
+      >
+        Github <span className="text-custom-500">Contribution activity</span>
+      </h1>
+      <GithubContribution />
+      <span ref={contactRef} data-aos="zoom-in" data-aos-duration="1000">
         <ContactContainer />
       </span>
       <Footer scrollFunction={scrollFunction} />

@@ -11,7 +11,6 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-import "./css/lineClamp.css";
 
 export default function ExpertiseCard({ title, description }) {
   const [open, setOpen] = useState(false);
@@ -28,7 +27,7 @@ export default function ExpertiseCard({ title, description }) {
           >
             {title}
           </Typography>
-          <Typography className="tailwing nunito">{description}</Typography>
+          <Typography className="climpPara nunito">{description}</Typography>
         </CardBody>
         <CardFooter className="pt-0">
           <Button

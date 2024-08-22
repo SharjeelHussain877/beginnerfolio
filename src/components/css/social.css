@@ -9,7 +9,6 @@
 }
 
 .wrapper .icon {
-  color: #12372a;
   position: relative;
   background: #fff;
   border-radius: 50%;
@@ -31,7 +30,6 @@
   top: 0;
   font-size: 14px;
   background: #fff;
-  color: #fff;
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);

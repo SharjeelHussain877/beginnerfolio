@@ -3,7 +3,6 @@ import React from "react";
 import ProfileCard from "./ProfileCard";
 import { Typography, Collapse } from "@material-tailwind/react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import "./css/showmore.css";
 
 function About() {
   const [open, setOpen] = React.useState(false);
@@ -17,11 +16,12 @@ function About() {
             variant="h1"
             className="mb-4 text-4xl md:text-7xl text-white nunito"
           >
-           <span className="text-[#0E8388]">About </span>Me
+            About
+           <span className="text-custom-500 ms-4">me</span>
           </Typography>
           <Typography
             variant="lead"
-            className="mb-12 opacity-80 text-[#CBE4DE] nunito"
+            className="mb-12 opacity-80 text-white nunito tracking-wider"
           >
             I'm a web and application developer with a passion for creating
             beautiful and functional digital solutions. My journey began with my
@@ -40,7 +40,7 @@ function About() {
           <Collapse open={open}>
             <Typography
               variant="lead"
-              className="mb-12 opacity-80 text-[#CBE4DE] nunito"
+              className="mb-12 opacity-80 text-white tracking-wider nunito"
             >
               What I love most about my work is solving complex problems and
               turning ideas into reality. Whether it’s a sleek portfolio site or
@@ -60,7 +60,7 @@ function About() {
             </Typography>
           </Collapse>
           <button
-            className="nunito flex gap-2 items-center showmore !bg-[#0E8388]"
+            className="nunito flex gap-2 items-center showmore bg-custom-500"
             onClick={toggleOpen}
           >
             Show more

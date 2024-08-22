@@ -9,6 +9,16 @@ const config = {
   ],
   theme: {
     extend: {
+      colors: { // whole theme color can be change from here and some can be change by global css
+        custom: {
+          DEFAULT: "#1a1625",
+          100: "#2f2b3a", 
+          200: "#46424f", 
+          300: "#5e5a66", 
+          400: "#76737e",
+          500: "#908d96",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

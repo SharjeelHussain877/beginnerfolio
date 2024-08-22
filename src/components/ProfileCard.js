@@ -6,7 +6,7 @@ import "./css/profile.css";
 
 function ProfileCard() {
   return (
-    <div className="card">
+    <div className="card !bg-custom-500">
       <div className="card__img">
         <Image src={"/banner.jpg"} width={540} height={450} />
       </div>
@@ -18,8 +18,8 @@ function ProfileCard() {
           // className="object-cover w-full h-full"
         />
       </div>
-      <div className="card__title nunito">Sharjeel Hussain</div>
-      <div className="card__subtitle nunito">Web Development</div>
+      <div className="card__title text-white nunito">Sharjeel Hussain</div>
+      <div className="card__subtitle text-white nunito">Web Development</div>
       <div className="card__wrapper">
         <Social />
       </div>

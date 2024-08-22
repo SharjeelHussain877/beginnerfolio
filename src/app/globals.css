@@ -8,12 +8,13 @@
   }
 }
 
-
 :root {
-  --dark: #2C3333;
-  --light: #2E4F4F;
-  --bright: #0E8388;
-  --open-bright: #CBE4DE;
+  --dark: #1a1625;
+  --light-100: "#2f2b3a"; 
+  --light-200: "#46424f"; 
+  --light-300: "#5e5a66"; 
+  --light-400: "#76737e";
+  --light-500: "#908d96";
 }
 
 /* styles/globals.css */
@@ -44,8 +45,6 @@ body {
   margin: 0px !important;
 }
 
-
-
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   background-color: #F5F5F5;
@@ -67,3 +66,258 @@ body {
                                      to(#2E4F4F), 
                                      color-stop(.6, #2E4F4F));
 }
+
+
+.showmore {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.showmore:active {
+  transform: scale(0.96);
+}
+
+.showmore:before,
+.showmore:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.showmore:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, var(--light-500) 20%, transparent 30%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--light-500) 15%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.showmore:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--light-500) 15%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%),
+    radial-gradient(circle, var(--light-500) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.climpPara {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  max-height: calc(
+    1.2em * 8
+  );
+  line-height: auto;
+}
+
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 18.5rem;
+  height: 12rem;
+  background: var(--light-500);
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #CBE4DE, #0E8388, #2C3333);
+  /* --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff); */
+  --color: #0E8388;
+}
+
+.notification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  /* background: #18181b; */
+  background: #2C3333;
+  z-index: 2;
+}
+
+.notification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.notification:hover:after {
+  transform: translateX(0.15rem);
+}
+
+.notititle {
+  color: var(--color);
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notititle {
+  transform: translateX(0.15rem);
+}
+.notification:hover .customButton {
+  transform: translateX(0.25rem);
+}
+
+.notibody {
+  color: #CBE4DE;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notibody {
+  transform: translateX(0.25rem);
+}
+
+.notiglow,
+.notiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle closest-side at center,
+    white,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.notiglow {
+  z-index: 3;
+}
+
+.notiborderglow {
+  z-index: 1;
+}
+
+.notification:hover .notiglow {
+  opacity: 0.1;
+}
+
+.notification:hover .notiborderglow {
+  opacity: 0.1;
+}
+
+.note {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+.customButton {
+  z-index: 99999;
+  height: 40px;
+  margin: 20px 20px;
+  width: 110px;
+  background: #0E8388 !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404c5d 1px;
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #0E8388, #CBE4DE);
+}
+
+.customButton:hover {
+  color: #fbfada;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  background: #2E4F4F !important;
+}
+
+.customButton:active {
+  color: #fff;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
