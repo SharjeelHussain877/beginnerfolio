@@ -8,7 +8,7 @@ function ContactContainer() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-2 max-w-screen-2xl w-full py-8">
       <div className="flex flex-col justify-center items-center p-4 md:col-span-3">
-        <Typography className="w-full text-6xl md:text-[4rem] lg:text-[6rem] leading-none font-clubbed tracking-wide font-bold text-custom-500">
+        <Typography className="w-full text-6xl md:text-[4rem] lg:text-[6rem] leading-none font-clubbed tracking-wide font-bold text-white">
           Let's chat.
           <br /> Tell me about your project.
         </Typography>
