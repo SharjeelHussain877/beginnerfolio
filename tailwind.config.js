@@ -9,6 +9,9 @@ const config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        clubbed: ['clubbed', 'sans-serif'],
+      },
       colors: { // whole theme color can be change from here and some can be change by global css
         custom: {
           DEFAULT: "#1a1625",
