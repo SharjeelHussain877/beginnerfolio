@@ -12,7 +12,7 @@ import { BookOpenIcon } from "@heroicons/react/24/solid";
 export default function Education() {
   return (
     <div className="w-auto">
-      <Typography variant="h2" className="pb-4 nunito text-white">
+      <Typography variant="h2" className="pb-4 text-white font-clubbed tracking-widest font-bold md:text-6xl">
         Education
       </Typography>
       <Timeline>

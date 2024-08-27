@@ -2,7 +2,6 @@
 import React from "react";
 import Slider from "react-slick";
 import DemoCard from "./DemoCard";
-import ExpertiseCard from "./ExpretiseCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -107,15 +106,26 @@ function SamplePrevArrow(props) {
 function ExpertContainer() {
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    speed: 300,
     slidesToShow: 4,
     autoplay: true,
     slidesToScroll: 1,
     initialSlide: 0,
+    lazyLoad: true,
+    // centerMode: true,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -126,7 +136,7 @@ function ExpertContainer() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 770,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

@@ -6,7 +6,10 @@
 }
 @media (max-width: 720px) {
   .embla {
-    --slide-size: 90%;
+    --slide-size: 80%;
+  }
+  .embla__container {
+    margin-left: calc(var(--slide-spacing) * -4) !important;
   }
 }
 .embla__viewport {

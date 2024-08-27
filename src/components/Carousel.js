@@ -23,13 +23,13 @@ const theme = {
 
 export default function HomeCarousel() {
   return (
-    <main className="bg-transparent relative overflow-hidden min-h-screen">
+    <main className="bg-transparent relative overflow-hidden w-full max-w-screen-2xl">
       <div className="flex relative z-20 items-center overflow-hidden">
-        <div className="container mx-auto px-6 flex relative py-16 justify-evenly">
-          <div className="flex flex-col relative z-20 sm:basis-2/4">
+        <div className="mx-auto px-6 grid grid-cols-1 md:grid-cols-5 relative py-16">
+          <div className="flex flex-col relative z-20 col-span-1 md:col-span-3 slide-right">
             <span className="w-20 h-2 bg-white mb-12">
             </span>
-            <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-custom-500">
+            <h1 className="uppercase text-6xl sm:text-8xl font-black md:flex md:flex-col leading-none dark:text-white text-custom-500 ">
               Hi,
               <span className="text-5xl sm:text-7xl text-white">
                 I'm Sharjeel
@@ -54,8 +54,8 @@ export default function HomeCarousel() {
               </a>
             </div>
           </div>
-          <div className="hidden sm:flex sm:w-1/3 lg:w-3/5 relative basis-2/4">
-            <img src="/avatar.svg" className="max-w-xs md:max-w-sm m-auto ml-auto mr-0" />
+          <div className="hidden md:flex relative col-span-2 slide-left">
+            <img src="/avatar.svg" className="mx-auto ml-0" />
           </div>
         </div>
       </div>

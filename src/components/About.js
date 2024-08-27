@@ -14,7 +14,7 @@ function About() {
         <div className="col-span-2 order-3 md:order-2">
           <Typography
             variant="h1"
-            className="mb-4 text-4xl md:text-7xl text-white nunito"
+            className="mb-4 text-4xl md:text-7xl text-white font-clubbed tracking-widest font-bold"
           >
             About
            <span className="text-custom-500 ms-4">me</span>
@@ -28,14 +28,6 @@ function About() {
             studies in computer science, which I completed at SMIT. During my
             time there, I developed a strong foundation in programming and web
             development, which has been crucial in my career.
-            <br />
-            <br />I specialize in using modern technologies like React and
-            Next.js. With React, I build dynamic and responsive user interfaces
-            that provide an excellent user experience. Next.js allows me to
-            create powerful server-rendered applications that are fast and
-            SEO-friendly. I’m also proficient with various libraries and tools
-            that complement these technologies, ensuring I can tackle a wide
-            range of projects efficiently.
           </Typography>
           <Collapse open={open}>
             <Typography
@@ -48,15 +40,6 @@ function About() {
               something that’s both functional and visually appealing. I believe
               in continuous learning and stay updated with the latest industry
               trends and best practices to ensure my skills are always sharp.
-              <br />
-              <br />
-              In every project, my goal is to deliver high-quality solutions
-              that meet and exceed client expectations. I take a collaborative
-              approach, working closely with clients to understand their needs
-              and create customized solutions that drive success. If you’re
-              looking for a dedicated developer who is passionate about web
-              building and problem-solving, I’d love to connect and discuss how
-              we can work together on your next project.
             </Typography>
           </Collapse>
           <button
