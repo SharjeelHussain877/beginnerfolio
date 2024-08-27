@@ -12,7 +12,7 @@ import { HomeIcon } from "@heroicons/react/24/solid";
 export default function Experiece() {
   return (
     <div className="w-auto">
-      <Typography variant="h2" className="pb-4 nunito text-white capitalize">
+      <Typography variant="h2" className="pb-4 text-white capitalize font-clubbed tracking-widest font-bold md:text-6xl">
         Experiece
       </Typography>
       <Timeline>
