@@ -24,7 +24,7 @@ const ProjectSlider = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla w-full max-w-screen-2xl">
+    <section className="embla max-w-screen-2xl">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((elem, index) => (

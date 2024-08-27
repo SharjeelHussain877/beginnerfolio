@@ -8,7 +8,7 @@ function ProfileCard() {
   return (
     <div className="card !bg-custom-500">
       <div className="card__img">
-        <Image src={"/banner.jpg"} width={540} height={450} />
+        <Image src={"/banner.jpg"} width={540} height={450} className="w-full" />
       </div>
       <div className="card__avatar">
         <img

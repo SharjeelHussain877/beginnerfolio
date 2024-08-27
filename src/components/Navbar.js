@@ -42,7 +42,7 @@ const navListMenuItems = [
   },
 ];
 
-function NavListMenu({ scrollFunction }) {
+function NavListMenu({ scrollFunction, setOpenNav }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -62,7 +62,12 @@ function NavListMenu({ scrollFunction }) {
               className: "h-6 text-gray-900 w-6",
             })}
           </div>
-          <div onClick={() => foo(title)}>
+          <div
+            onClick={() => {
+              foo(title);
+              setOpenNav(false);
+            }}
+          >
             <Typography
               variant="h6"
               color="blue-gray"
@@ -92,7 +97,7 @@ function NavListMenu({ scrollFunction }) {
         allowHover={true}
       >
         <MenuHandler>
-          <Typography as="div" variant="small" >
+          <Typography as="div" variant="small">
             <ListItem
               className="flex items-center gap-2 py-2 pr-4 font-medium text-custom nunito text-lg"
               selected={isMenuOpen || isMobileMenuOpen}
@@ -201,9 +206,7 @@ function NavListMenu({ scrollFunction }) {
   );
 }
 
-function NavList({ scrollFunction }) {
-  // console.log(scrollFunction?.["about"]());
-
+function NavList({ scrollFunction, setOpenNav }) {
   function foo(sec_name) {
     if (sec_name === "about") scrollFunction?.["about"]();
     if (sec_name === "contact") scrollFunction?.["contact"]();
@@ -218,7 +221,10 @@ function NavList({ scrollFunction }) {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 nunito text-lg">
+        <ListItem
+          className="flex items-center gap-2 py-2 pr-4 nunito text-lg"
+          onClick={() => setOpenNav(false)}
+        >
           Home
         </ListItem>
       </Typography>
@@ -231,12 +237,15 @@ function NavList({ scrollFunction }) {
       >
         <ListItem
           className="flex items-center gap-2 py-2 pr-4 nunito text-lg"
-          onClick={() => foo("about")}
+          onClick={() => {
+            foo("about");
+            setOpenNav(false);
+          }}
         >
           About us
         </ListItem>
       </Typography>
-      <NavListMenu scrollFunction={scrollFunction} />
+      <NavListMenu scrollFunction={scrollFunction} setOpenNav={setOpenNav} />
       <Typography
         as="a"
         href="#"
@@ -246,7 +255,10 @@ function NavList({ scrollFunction }) {
       >
         <ListItem
           className="flex items-center gap-2 py-2 pr-4 nunito text-lg"
-          onClick={() => foo("contact")}
+          onClick={() => {
+            setOpenNav(false);
+            foo("contact");
+          }}
         >
           Contact us
         </ListItem>
@@ -265,45 +277,56 @@ export default function NavigationBar({ scrollFunction }) {
     );
   }, []);
 
-  // console.log(scrollFunction.scrollBottom());
   return (
-    <Navbar className="mx-auto max-w-screen-3xl px-4 py-2 shadow-none border-none sticky top-0 z-50 rounded-none bg-white">
-      <div className="flex items-center justify-between text-custom">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina text-2xl sm:text-4xl"
-        >
-          {`<Sharjeel`}
-          <span className="text-custom-400"> Hussain </span>
-          {`/>`}
-        </Typography>
-        <div className="hidden lg:block nunito">
+    <div className="w-full bg-gray-200">
+      <Navbar className="px-4 py-4 mx-auto max-w-screen-2xl shadow-none border-none sticky top-0 z-50 rounded-none bg-transparent">
+        <div className="flex items-center justify-between text-custom">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2 agustina text-2xl sm:text-4xl"
+          >
+            {`<Sharjeel`}
+            <span className="text-custom-400"> Hussain </span>
+            {`/>`}
+          </Typography>
+          <div className="hidden lg:block nunito">
+            <NavList scrollFunction={scrollFunction} setOpenNav={setOpenNav} />
+          </div>
+          <div className="hidden gap-2 lg:flex">
+            <Avatar
+              src="/avatar.png"
+              alt="avatar"
+              variant="rounded"
+              size="sm"
+            />
+          </div>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
           <NavList scrollFunction={scrollFunction} />
-        </div>
-        <div className="hidden gap-2 lg:flex">
-          <Avatar src="/avatar.png" alt="avatar" variant="rounded" size="sm" />
-        </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList scrollFunction={scrollFunction} />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Avatar src="/avatar.png" alt="avatar" variant="rounded" size="sm" />
-        </div>
-      </Collapse>
-    </Navbar>
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <Avatar
+              src="/avatar.png"
+              alt="avatar"
+              variant="rounded"
+              size="sm"
+            />
+          </div>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }
