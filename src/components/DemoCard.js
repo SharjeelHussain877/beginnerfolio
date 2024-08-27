@@ -1,28 +1,27 @@
 import React, { useState } from "react";
 import {
-  Button,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
+  Button,
 } from "@material-tailwind/react";
 
 function DemoCard({ title, description }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   return (
-    <>
-      <div className="notification">
+    <div className="mx-2">
+      <div className="notification bg-custom-300 text-custom-100">
         <div className="notiglow"></div>
         <div className="notiborderglow"></div>
-        <div className="notititle nunito">{title}</div>
-        <div className="notibody climpPara nunito">
+        <div className="notititle nunito !font-bold">{title}</div>
+        <div className="notibody climpPara text-custom nunito">
           {description}
-          <br />
         </div>
-        <button className="customButton" onClick={handleOpen}>
+        <Button className="customButton z-10 m-[20px] text-white bg-custom-100 border-custom  border-2 tracking-widest hover:bg-custom nunito" onClick={handleOpen}>
           Read more
-        </button>
+        </Button>
       </div>
       <Dialog
         open={open}
@@ -33,15 +32,15 @@ function DemoCard({ title, description }) {
         }}
         className="bg-[#9e9e9e]"
       >
-        <DialogHeader className="nunito text-[#0E8388]">{title}</DialogHeader>
-        <DialogBody className="nunito text-[#CBE4DE]">{description}</DialogBody>
+        <DialogHeader className="nunito text-custom">{title}</DialogHeader>
+        <DialogBody className="nunito text-custom-100">{description}</DialogBody>
         <DialogFooter>
-          <button className="customButton nunito" onClick={handleOpen}>
+          <Button className=" text-white bg-custom-100 border-custom  border-2 tracking-widest hover:bg-custom nunito" onClick={handleOpen}>
           okay
-        </button>
+        </Button>
         </DialogFooter>
       </Dialog>
-    </>
+    </div>
   );
 }
 
